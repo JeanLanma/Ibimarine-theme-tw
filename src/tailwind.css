@@ -39,3 +39,66 @@
         font-family: Athelas;
     }
 }
+
+/* Custome styles */
+
+.month-day {
+    cursor: pointer;
+}
+
+.calendar__day-selected {
+    @apply bg-old-gold text-white py-1;
+}
+
+.reservation__calendar {
+    margin-top: 3rem;
+}
+
+.reservation__calendar>h2 {
+    @apply text-lg mb-1;
+}
+
+.calendar-front {
+    @apply mx-auto max-w-xs border-y border-x border-old-black/75;
+}
+
+.calendar__header {
+    @apply -z-50 py-3 px-2 bg-old-gold text-white border-t-8 border-2 border-old-black
+    flex justify-evenly items-center text-xl;
+}
+
+ol.calendar__weekdays {
+    @apply flex justify-around;
+}
+
+.calendar__weekdays {
+    @apply mt-4;
+}
+
+.calendar__weekdays .weekday-name {
+    @apply text-xl;
+}
+
+.calendar__days-container {
+
+    @apply border-x-2 border-b-2 border-old-black rounded-b-sm;
+}
+ol.calendar__days {
+    @apply text-center grid grid-cols-7 pt-2 pb-3 px-0 text-xl;
+}
+
+.day-name {
+    @apply text-2xl;
+}
+
+.calendar__numberDay li {
+    @apply p-2 text-xl leading-normal;
+}
+
+.first-day {
+    grid-column-start: var(--first-day-start, 0);
+  }
+
+.calendar-active {
+    @apply block;
+}

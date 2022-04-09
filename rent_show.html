@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Section Header -->
+    <header class="container mt-8">
+
+        <div class="relative h-20">
+            <div class="absolute left-0 right-0 mx-auto w-56">
+                <img src="./img/home/home-logo_01.png" alt="Logo ibimarine">
+            </div>
+    
+            <div class="absolute right-0 top-0 mt-2 mr-5" id="menu_open">
+                <i class="text-3xl fa-solid fa-bars text-old-gold"></i>
+            </div>
+        </div>
+
+        <div class="block text-center">
+            <div>
+                <p class="font-bold text-old-black uppercase">Agente Oficial de Ibiza</p>
+            </div>
+            <div class="columns-3xs flex justify-center gap-3 mt-1 mb-1">
+                <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
+                <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
+                <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Section Menu Mobile -->
+
+    <div id="menu_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black h-screen w-full">
+
+        <header class="container mt-8">
+
+            <div class="relative h-20">
+                <div class="absolute left-0 right-0 mx-auto w-56">
+                    <img src="./img/logoibimarine_2.png" alt="Logo ibimarine">
+                </div>
+        
+                <div id="menu_close" class="absolute right-0 top-0 -mt-1 mr-5">
+                    <span class="text-5xl text-old-gold">&times;</span>
+                </div>
+            </div>
+    
+        </header>
+
+        <section>
+            <div class="border-y-2 border-old-gold w-4/5 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
+                <div class="w-16 flex items-center hover:opacity-100">
+                    <div>
+                        <img src="./img/lang_es.png" alt=""> 
+                    </div>
+                    <div >
+                        <span class="text-2xl font-bold ml-2">ES</span>
+                    </div>
+                </div> 
+                <span class="place-self-center text-lg">&#124;</span>
+                <div class="w-16 flex items-center opacity-50 hover:opacity-100">
+                    <div>
+                        <img src="./img/lang_en.png" alt=""> 
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold ml-2">EN</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Home</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Alquiler</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Venta</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Complementos</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Eventos</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Noticias</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Contacto</p></a>
+        </section>
+
+        <section>
+            <div class="border-y-2 border-old-gold w-4/5 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
+                <div>
+                    <p class="font-bold text-2xl">Área Privada</p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Section Hero - Title -->
+    <section class="mt-5">
+        <div class="border-y-4 border-old-gold py-2">
+           <p class="text-center text-old-black text-2xl uppercase font-bold">Alquiler de Yates</p>
+        </div>
+    </section>
+
+    <!-- Section Page content -->
+
+    <div class="container sm:flex sm:columns-2 sm:gap-1 md:gap-0 sm:justify-center sm:mx-auto">
+
+        <!-- Section Slides -->
+        <div>
+
+            <!-- Slider Hero Image -->
+            <div>
+                <div class="swiper main_img h-56 overflow-y-hidden ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/home/home-04.jpg" alt="Hero Slider Image">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/rent/rent-02.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/rent/rent-03.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/rent/rent-01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/rent/rent-02.jpeg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="./img/rent/rent-03.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider thumbnails Carousel -->
+            <div class="flex mx-auto justify-center items-center my-2">
+                <div class="arrow w-1/12 h-6" id="arrowPrev">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="43.026 0 161.967 490" width="161.967" height="490">
+                    <!-- <svg style="width: 1rem; height: auto; margin: 0 5px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="43.026 0 161.967 490" width="161.967" height="490"> -->
+                        <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="204.993 0.285 204.993 490 43.026 244.36 204.72 0" bx:origin="0.525 0.496"/>
+                    </svg>
+                </div>
+                <div class="swiper thumbnails-row mx-auto w-10/12" thumbsSlider="">
+                    <div class="swiper-wrapper flex">
+                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                            <img class="object-cover" src="./img/rent/rent-01.jpg" alt="thumbnail">
+                        </div>
+                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                            <img class="object-cover" src="./img/rent/rent-02.jpeg" alt="thumbnail">
+                        </div>
+                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                            <img class="object-cover" src="./img/rent/rent-03.jpeg" alt="thumbnail">
+                        </div>
+                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                            <img class="object-cover" src="./img/rent/rent-01.jpg" alt="thumbnail">
+                        </div>
+                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                            <img class="object-cover" src="./img/rent/rent-02.jpeg" alt="thumbnail">
+                        </div>
+                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                            <img class="object-cover" src="./img/rent/rent-03.jpeg" alt="thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow w-1/12 h-6" id="arrowNext">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="51.124 -3.92 161.967 490" width="161.967" height="490">
+                        <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="204.993 0.285 204.993 490 43.026 244.36 204.72 0" transform="matrix(-1, 0, 0, -1, 256.117344, 486.079994)" bx:origin="0.525 0.496"/>
+                      </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Boat Title on Mobile -->
+
+        <div>
+            <div class="bg-old-gold text-center w-11/12 mx-auto py-1 mt-6">
+                <h1 class="text-white text-xl font-bold">Sessa Marine c44</h1>
+            </div>
+        </div>
+
+        <!-- Section Boat Features -->
+        <div class="">
+
+            <!-- yacht feauture icons -->
+            <div class="flex justify-evenly px-6 my-3 opacity-50">
+
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="" src="./img/yacht_icons/users.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">11+1</span>
+                </div>
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="" src="./img/yacht_icons/captain.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">Captain</span>
+                </div>
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="" src="./img/yacht_icons/air-conditioner.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">Air</span>
+                </div>
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="img-fluid" src="./img/yacht_icons/drinks.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">Drink</span>
+                </div>
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="img-fluid" src="./img/yacht_icons/sports.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">Sports</span>
+                </div>
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="img-fluid" src="./img/yacht_icons/shower.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">Shower</span>
+                </div>
+                <div class="w-7 flex flex-col justify-center items-center text-center">
+                    <img class="img-fluid" src="./img/yacht_icons/music.png" alt="feature icon">
+                    <span class="yacht__icon-caption text-xs">Music</span>
+                </div>
+
+            </div>
+            
+            <!-- yacht description -->
+            <div class="px-6 text-center">
+                <p> 
+                    Cras Venenatis porta ligula ses suscipit.
+                    Ut in vehicula ex. Vivamus fermentum
+                    nunc mi, ac codimentum magna 
+                    porttitor faucibus. Maecenas vel odio
+                    nec arcu iaculis convallis.
+                    <br>
+                    <br>
+                    Suspendisse in risus sem. Donec eu
+                    dolor facilis, lacinia justo sit amet,
+                    condimentum leo. integer aliquam
+                    tempor rhoncus.
+                </p>
+            </div>
+            <!-- yacht feature table -->
+            <div class="px-6">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <table class="min-w-full">
+                        <tbody table class="min-w-full">
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Length
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                14 m
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Beam
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                3,99 m
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Engines
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                2 x 500 Hp Volvo IPS
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Cruising Velocity
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                -
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Max Speed
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                35 N
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Mark
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                Otto
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Mark
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                Otto
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Mark
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                Otto
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Mark
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                Otto
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Mark
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                Otto
+                                </td>
+                            </tr>
+
+                            <tr class="even:bg-gray-1 flex justify-between w-full px-3">
+                                <td class="text-sm text-old-black font-light">
+                                Mark
+                                </td>
+                                <td class="text-sm text-old-black font-light">
+                                Otto
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservatio calendar -->
+            <div>
+                <div id="reservationCalendar">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Section Contact -->
+
+    <div class="text-center">
+        <div class="m-0">
+            <p class="text-old-gold text-xl font-bold">¡Contacta con nosotros!</p>
+        </div>
+        <div>
+            <p class="text-3xl font-bold text-old-black">+34 650 020 215</p>
+        </div>
+        <div class="text-old-gold text-3xl my-1">
+            <a href="#"><i class="fa-brands fa-facebook-square mr-3"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square "></i></a>
+        </div>
+    </div>
+
+    <!-- Section footer -->
+
+    <footer class="text-old-black text-center mx-auto">
+        <div>
+            <p>Derechos Reservados</p>
+        </div>
+        <div>
+            <p class="inline">Términos y condiciones</p> - <p class="inline">Política de Privacidad</p>
+        </div>
+        <div>
+            <p class="inline">Política de cookies</p> - <p class="inline">Protección de datos</p>
+        </div>
+        <div>
+            <p> <b>IBIMARINE &copy;</b> </p>
+        </div>
+    </footer>
+
+    <!-- Calendar Script -->
+    <script src="./js/calenMod.js"></script>
+    <script src="./js/backOfficeCalendar.js"></script>
+
+    <!-- Menu Script -->
+    <script src="./vendor/swiper/swiper-bundle.min.js"></script>
+
+
+    <script>
+
+        // Main Slide
+        const slideMainThumbs = new Swiper('.thumbnails-row', {
+            slidesPerView: 3,
+            spaceBetween: 5,
+            watchSlidesProgress: true,
+        })
+
+        const slideMain = new Swiper('.main_img', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '#arrowNext',
+                prevEl: '#arrowPrev'
+            },
+            thumbs: {
+                    swiper: slideMainThumbs,
+                    },
+        })
+
+        const closeMenuBtn = document.getElementById('menu_close');
+        const openMenuBtn = document.getElementById('menu_open');
+        const menuMobile = document.getElementById('menu_overlay');
+
+        // Similar boats slide
+
+        // const slideSimilarBoats = new Swiper('.swiper-similar-boats' , {
+        //     width: 110,
+        //     spaceBetween: 10,
+        //     centeredSlidesBounds: true
+        // })
+
+
+        // Menu mobile
+        closeMenuBtn.addEventListener('click', closeMenu);
+        openMenuBtn.addEventListener('click', openMenu)
+
+        function closeMenu(){
+            menuMobile.style.display = 'none';
+        }
+
+        function openMenu(){
+            menuMobile.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
