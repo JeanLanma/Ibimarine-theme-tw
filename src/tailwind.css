@@ -40,6 +40,14 @@
     }
 }
 
+@layer utilities {
+/* Active link */
+
+.active-link {
+    @apply text-white bg-old-gold;
+}
+}
+
 /* Custome styles */
 
 .month-day {
