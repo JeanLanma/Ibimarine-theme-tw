@@ -1867,6 +1867,10 @@ ol.calendar__weekdays {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 12;
   }
+
+  .lg\:last\:ml-0:last-child {
+    margin-left: 0px;
+  }
 }
 
 @media (min-width: 1280px) {
