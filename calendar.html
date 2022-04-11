@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Section Header -->
+    <header class="container mt-8 lg:mt-10">
+
+        <div class="relative h-20">
+            <div class="absolute left-0 right-0 mx-auto w-56 lg:w-72">
+                <img src="./img/home/home-logo_01.png" alt="Logo Ibimarine">
+            </div>
+    
+            <div class="absolute right-0 top-0 mt-2 mr-5 lg:hidden" id="menu_open">
+                <i class="text-3xl fa-solid fa-bars text-old-gold"></i>
+            </div>
+        </div>
+
+        <div class="block text-center lg:mt-6">
+            <div>
+                <p class="font-bold text-old-black uppercase">Agente Oficial de Ibiza</p>
+            </div>
+            <div class="columns-3xs flex justify-center gap-3 mt-1 mb-1 ">
+                <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
+                <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
+                <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Section Menu Mobile -->
+
+    <div id="menu_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black h-screen w-full">
+
+        <header class="container mt-8">
+
+            <div class="relative h-20">
+                <div class="absolute left-0 right-0 mx-auto w-56">
+                    <img src="./img/logoibimarine_2.png" alt="Logo ibimarine">
+                </div>
+        
+                <div id="menu_close" class="absolute right-0 top-0 -mt-1 mr-5">
+                    <span class="text-5xl text-old-gold">&times;</span>
+                </div>
+            </div>
+    
+        </header>
+
+        <section>
+            <div class="border-y-2 border-old-gold w-4/5 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
+                <div class="w-16 flex items-center hover:opacity-100">
+                    <div>
+                        <img src="./img/lang_es.png" alt=""> 
+                    </div>
+                    <div >
+                        <span class="text-2xl font-bold ml-2">ES</span>
+                    </div>
+                </div> 
+                <span class="place-self-center text-lg">&#124;</span>
+                <div class="w-16 flex items-center opacity-50 hover:opacity-100">
+                    <div>
+                        <img src="./img/lang_en.png" alt=""> 
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold ml-2">EN</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Home</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Alquiler</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Venta</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Complementos</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Eventos</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Noticias</p></a>
+            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Contacto</p></a>
+        </section>
+
+        <section>
+            <div class="border-y-2 border-old-gold w-4/5 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
+                <div>
+                    <p class="font-bold text-2xl">Área Privada</p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Section Menu Desktop -->
+    <div class="hidden lg:block">
+        <div class="w-4/5 mx-auto mt-8">
+            <ul class="flex justify-between text-old-black font-bold">
+                <li class="active-link py-1 px-7"><a class="uppercase text-sm " href="/"> Inicio </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/rent.html"> Alquiler </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/sale.html"> Venta </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/toys.html"> Toys </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/events.html"> Eventos </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/news.html"> Noticias </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/contact.html"> Contacto </a></li>
+                <li class=" py-1 pr-4"><a class="uppercase text-sm " href="/"> Area Privada </a></li>
+                <li class="flex">
+                    <a href="#" class="flex items-center mr-1">
+                        <img class="mr-1 w-4 h-3" src="./img/lang_es.png" alt="">
+                        <span>ES</span>
+                    </a>
+                    <span class="mr-1">|</span>
+                    <a href="#" class="flex items-center">
+                        <img class="mr-1 w-4 h-3" src="./img/lang_en.png" alt="">
+                        <span>EN</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section Hero - Title -->
+    <section class="my-5">
+        <div class="border-y-4 border-old-gold py-2  lg:px-16 lg:mx-auto lg:w-max">
+           <p class="text-center text-old-black text-2xl uppercase font-bold">Calendario 2022</p>
+        </div>
+    </section>
+
+
+    <!-- Section Page content -->
+
+    <div class="container mb-20 lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
+
+    <div>
+
+        <div id="reservationCalendar"></div>
+        <div class="reservation-calendar w-80 mx-auto font-bold">
+            <!-- Calendar Head -->
+            <div class="flex justify-center text-old-black h-11 items-center rounded-t-xl text-xl">
+                <div class="calendar-left-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"></path></svg><!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com --></div>
+                  <div class="calendar__month_year font-bold mx-10">
+                    <span class="calendar__month text-capitalize">April</span>
+                    <span class="calendar__year">2022</span>
+                  </div>
+                <div class="calendar-right-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg><!-- <i class="fa-solid fa-chevron-right"></i> Font Awesome fontawesome.com --></div>
+            </div>
+            <!-- Calendar Body -->
+            <div class="reservation_calendar__days-container text-center text-old-black">
+                <ol class="calendar__days text-center grid grid-cols-7 pb-3 px-0 text-xl text-old-black">
+                    <li class='day-name'>M</li>
+                    <li class='day-name'>T</li>
+                    <li class='day-name'>W</li>
+                    <li class='day-name'>T</li>
+                    <li class='day-name'>F</li>
+                    <li class='day-name'>S</li>
+                    <li class='day-name'>S</li>
+                </ol>
+                <ol class="calendar__days calendar__numberDay text-center grid gap-y-6 gap-x-1 grid-cols-7 pb-3 px-0 text-xl">
+                  <li class='first-day border border-[#c2c2c4] month-day' style="--first-day-start: 4">1</li>
+                  <li class="month-day border border-[#c2c2c4]">2</li>
+                  <li class="month-day border border-[#c2c2c4]">3</li>
+                  <li class="month-day border border-[#c2c2c4]">4</li>
+                  <li class="month-day border border-[#c2c2c4]">5</li>
+                  <li class="month-day border border-[#c2c2c4]">6</li>
+                  <li class="month-day border border-[#c2c2c4]">7</li>
+                  <li class="month-day border border-[#c2c2c4]">8</li>
+                  <li class="month-day border border-[#c2c2c4]">9</li>
+                  <li class="month-day border border-[#c2c2c4]">10</li>
+                  <li class="month-day border border-[#c2c2c4]">11</li>
+                  <li class="month-day border border-[#c2c2c4]">12</li>
+                  <li class="month-day border border-[#c2c2c4]">13</li>
+                  <li class="month-day border border-[#c2c2c4]">14</li>
+                  <li class="month-day border border-[#c2c2c4]">15</li>
+                  <li class="month-day border border-[#c2c2c4]">16</li>
+                  <li class="month-day border border-[#c2c2c4]">17</li>
+                  <li class="month-day border border-[#c2c2c4]">18</li>
+                  <li class="month-day border border-[#c2c2c4]">19</li>
+                  <li class="month-day border border-[#c2c2c4]">20</li>
+                  <li class="month-day border border-[#c2c2c4]">21</li>
+                  <li class="month-day border border-[#c2c2c4]">22</li>
+                  <li class="month-day border border-[#c2c2c4]">23</li>
+                  <li class="month-day border border-[#c2c2c4]">24</li>
+                  <li class="month-day border border-[#c2c2c4]">25</li>
+                  <li class="month-day border border-[#c2c2c4]">26</li>
+                  <li class="month-day border border-[#c2c2c4]">27</li>
+                  <li class="month-day border border-[#c2c2c4]">28</li>
+                  <li class="month-day border border-[#c2c2c4]">29</li>
+                  <li class="month-day border border-[#c2c2c4]">30</li>
+                  <li class="month-day border border-[#c2c2c4]">31</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="hidden">
+            <input type="date" name="date_start" id="date_start">
+            <input type="date" name="date_end" id="date_end">
+        </div>
+
+        <!-- buttons -->
+        <div class="mx-auto mt-5 text-center flex justify-center gap-3">
+            <div>
+                <input class="btn-on" type="submit" value="Ver">
+            </div>
+            <div>
+                <input class="btn-off" type="submit" value="Reservar">
+            </div>
+        </div>
+    </div>
+
+   
+    </div>
+
+
+    <!-- Section footer -->
+    <footer class="text-old-black text-center mx-auto lg:flex lg:my-10 lg:w-4/5  lg:gap-4">
+        <div class="lg:hidden">
+            <p>Derechos Reservados</p>
+        </div>
+        <div>
+            <p class="inline">Términos y condiciones</p> - <p class="inline">Política de Privacidad</p>
+        </div>
+        <div>
+            <p class="inline">Política de cookies</p> - <p class="inline">Protección de datos</p>
+        </div>
+        <div class="lg:-order-1">
+            <p> <b>IBIMARINE &copy;</b> </p>
+        </div>
+
+        <div class="ml-36 hidden lg:justify-self-end lg:flex">
+            <p class="mr-5">Find US: </p>
+            <a href="#" class="text-old-gold"><i class="fa-brands fa-facebook-square mr-3"></i></a>
+            <a href="#" class="text-old-gold"><i class="fa-brands fa-instagram-square "></i></a>
+        </div>
+    </footer>
+
+    <!-- Menu Script -->
+
+
+    <script src="/js/calenMod.js"></script>
+    <script src="/js/reservationCalendar.js"></script>
+
+    <script>
+        const closeMenuBtn = document.getElementById('menu_close');
+        const openMenuBtn = document.getElementById('menu_open');
+        const menuMobile = document.getElementById('menu_overlay');
+
+        closeMenuBtn.addEventListener('click', closeMenu);
+        openMenuBtn.addEventListener('click', openMenu)
+
+        function closeMenu(){
+            menuMobile.style.display = 'none';
+        }
+
+        function openMenu(){
+            menuMobile.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

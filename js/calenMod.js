@@ -190,6 +190,11 @@ const UICalendar = function({startsOn, monthName, numberDaysInMonth, monthId, ye
 
     this.HtmlWeekDays = UCalendar.weekDays.map((dayName) => `<li class='day-name'>${dayName}</li> \n`);
 
+    this.customeHtmlCalendar = function(callback){
+      const getCalendarInfo = {startsOn, monthName, numberDaysInMonth, monthId, year, HtmlMonthDays: this.HtmlMonthDays, HtmlWeekDays: this.HtmlWeekDays};
+        return callback(getCalendarInfo);
+    }
+
     this.HtmlMonthCalendar =`
                               <div data-month-id="${monthId}" class="max-w-xs w-4/5 mx-auto hidden ${UCalendar.getMonthCalendarInfo().monthName === monthName ? 'calendar-active': ''}">
                               <div class="bg-old-gold flex justify-center text-white h-11 items-center rounded-t-xl text-xl">
@@ -240,6 +245,48 @@ const UIFullCalendar = function({Year, target}){
     this._target = target;  
 
     this.UIcalendar = UCalendar.getYearCalendarInfo(_Year).map((element) => new UICalendar(element));
+    this.UICalendarHtml = this.UIcalendar.map((HtmlCalendar) => HtmlCalendar.HtmlMonthCalendar);
+    
+    this._target.innerHTML = this.UICalendarHtml.join('');
+
+
+    const pickedDays = new UDatePicker(UCalendar);
+    const UXcontroll = new UXCalendar({UIcalendar: this})
+
+    document.addEventListener('DOMContentLoaded', function(event){
+
+        if(typeof target !== 'object') return null;
+
+        target.addEventListener('click', function(e){
+
+          if(e.target.classList.contains('fa-chevron-right') || e.target.classList.contains('calendar-right-arrow')) {
+              UXcontroll.showNextCalendar(e);
+          }
+      if(e.target.classList.contains('fa-chevron-left') || e.target.classList.contains('calendar-left-arrow')) {
+              UXcontroll.showPrevCalendar(e);
+          }
+
+            if(!UCalendar.isCalendarDate(e.target)) return null;
+
+            const pickedDay = UCalendar.parser(e.target);
+
+            if(!UCalendar.isAfterToday(pickedDay.date)) ;//return null;
+
+            pickedDays.pickDate(pickedDay);
+        })
+    })
+    
+}
+const UICustomeFullCalendar = function({Year, target}){
+
+    const _Year = Year || UCalendar.Now().Year;
+    this._target = target;  
+
+    this.UIcalendar = UCalendar.getYearCalendarInfo(_Year).map((element) => new UICalendar(element));
+
+    this.CustomeUI = function(callback){
+      return this.UIcalendar.map((HtmlCalendar) => HtmlCalendar.customeHtmlCalendar(callback))
+    }
     this.UICalendarHtml = this.UIcalendar.map((HtmlCalendar) => HtmlCalendar.HtmlMonthCalendar);
     
     this._target.innerHTML = this.UICalendarHtml.join('');
