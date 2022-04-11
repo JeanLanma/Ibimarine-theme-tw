@@ -874,6 +874,14 @@ html {
   margin-bottom: 1rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
 .block {
   display: block;
 }
@@ -1020,6 +1028,10 @@ html {
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .min-w-full {
@@ -1171,6 +1183,26 @@ html {
 .bg-gray-1 {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 228 / var(--tw-bg-opacity));
+}
+
+.bg-old-black\/60 {
+  background-color: rgb(60 64 69 / 0.6);
+}
+
+.bg-old-black\/70 {
+  background-color: rgb(60 64 69 / 0.7);
+}
+
+.bg-old-black\/80 {
+  background-color: rgb(60 64 69 / 0.8);
+}
+
+.bg-old-black\/90 {
+  background-color: rgb(60 64 69 / 0.9);
+}
+
+.bg-old-black\/95 {
+  background-color: rgb(60 64 69 / 0.95);
 }
 
 .object-cover {

@@ -42,7 +42,7 @@
     </header>
 
     <!-- Section Menu Mobile -->
-    <div id="menu_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black h-screen w-full">
+    <div id="menu_overlay" class="hidden fixed top-0 left-0 z-10 h-screen w-full">
 
         <header class="container mt-8">
 
@@ -100,6 +100,39 @@
 
 
     </div>
+
+    <!-- Section Overlays -->
+
+    <!-- Request - overlay -->
+    <div id="request_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black/95  h-screen w-full">
+
+        <!-- Overlay content -->
+        <div class="h-screen flex flex-col items-center text-center">
+            <div>
+                <div class="w-56 mt-40 mx-auto">
+                    <img src="./img/logoibimarine_2.png" alt="Logo Ibimarine">
+                </div>
+            </div>
+
+            <div class="text-white text-center">
+                <div class="w-4/5 mx-auto my-10">
+                    <p class="font-bold text-2xl my-5">¡Gracias por su Petición!</p>
+                    <p class=" text-xl">En menos de 12 horas,
+                        nuestros comerciales
+                        contactaran con Usted
+                        para finalizar la reserva
+                    </p>
+                </div>
+
+            </div>
+
+            <div>
+                <button id="request_close" class="btn-gold">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+    
 
     <!-- Section Menu Desktop -->
     <div class="hidden lg:block">
@@ -468,7 +501,7 @@
                     </div>
 
                     <div class="text-center">
-                        <input class="btn-gold" type="submit" value="Enviar Petición">
+                        <input id="request_open" class="btn-gold" type="submit" value="Enviar Petición">
                     </div>
                 </form>
             </div>
@@ -568,7 +601,7 @@
 
  <!-- Section footer -->
 
- <footer class="text-old-black text-center mx-auto lg:flex lg:my-10 lg:w-4/5  lg:gap-4   lg:border-t-4 lg:border-t-old-gold lg:pt-8">
+ <footer class="text-old-black text-center mx-auto lg:flex lg:my-10 lg:w-4/5  lg:gap-4 ">
     <div class="lg:hidden">
         <p>Derechos Reservados</p>
     </div>
@@ -622,10 +655,6 @@
                     },
         })
 
-        const closeMenuBtn = document.getElementById('menu_close');
-        const openMenuBtn = document.getElementById('menu_open');
-        const menuMobile = document.getElementById('menu_overlay');
-
         // Similar boats slide
 
         const slideSimilarBoats = new Swiper('.swiper-similar-boats' , {
@@ -639,8 +668,14 @@
                     },
         }})
 
-
+        
+        
+        
         // Menu mobile
+
+        const closeMenuBtn = document.getElementById('menu_close');
+        const openMenuBtn = document.getElementById('menu_open');
+        const menuMobile = document.getElementById('menu_overlay');
         closeMenuBtn.addEventListener('click', closeMenu);
         openMenuBtn.addEventListener('click', openMenu)
 
@@ -650,6 +685,25 @@
 
         function openMenu(){
             menuMobile.style.display = 'block';
+        }
+
+        // Request Overlay 
+
+        const closeOverlayRequest = document.getElementById('request_close');
+        const openRequestBtn = document.getElementById('request_open');
+        const requestOverlay = document.getElementById('request_overlay');
+
+        closeOverlayRequest.addEventListener('click', closeMenu);
+        openRequestBtn.addEventListener('click', openMenu)
+
+        function closeMenu(e){
+            e.preventDefault()
+            requestOverlay.style.display = 'none';
+        }
+        
+        function openMenu(e){
+            e.preventDefault()
+            requestOverlay.style.display = 'block';
         }
     </script>
 
