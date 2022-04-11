@@ -857,6 +857,10 @@ html {
   margin-top: -1rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-40 {
   margin-top: 10rem;
 }
@@ -933,6 +937,10 @@ html {
   height: 2rem;
 }
 
+.h-44 {
+  height: 11rem;
+}
+
 .h-\[150px\] {
   height: 150px;
 }
@@ -993,6 +1001,14 @@ html {
   width: 2rem;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-\[150px\] {
   width: 150px;
 }
@@ -1007,10 +1023,6 @@ html {
 
 .w-10\/12 {
   width: 83.333333%;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
 }
 
 .w-7 {
@@ -1121,6 +1133,11 @@ html {
   border-top-right-radius: 12px;
 }
 
+.rounded-l-xl {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
@@ -1129,6 +1146,10 @@ html {
 .rounded-b-xl {
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-y-2 {
@@ -1294,6 +1315,10 @@ html {
   line-height: 2rem;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .text-old-gold {
   --tw-text-opacity: 1;
   color: rgb(170 161 115 / var(--tw-text-opacity));
@@ -1311,6 +1336,13 @@ html {
 
 .opacity-50 {
   opacity: 0.5;
+}
+
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 /* Active link */
@@ -1504,6 +1536,20 @@ ol.calendar__weekdays {
   margin-left: 0px;
 }
 
+.even\:flex-row-reverse:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.even\:rounded-l-none:nth-child(even) {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.even\:rounded-r-xl:nth-child(even) {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
 .even\:bg-gray-1:nth-child(even) {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 228 / var(--tw-bg-opacity));
@@ -1620,6 +1666,14 @@ ol.calendar__weekdays {
     height: 2.5rem;
   }
 
+  .lg\:h-80 {
+    height: 20rem;
+  }
+
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:w-72 {
     width: 18rem;
   }
@@ -1638,12 +1692,16 @@ ol.calendar__weekdays {
     width: 100%;
   }
 
-  .lg\:w-3\/6 {
-    width: 50%;
-  }
-
   .lg\:w-96 {
     width: 24rem;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
+  .lg\:w-2\/5 {
+    width: 40%;
   }
 
   .lg\:w-\[50\%\] {
@@ -1726,10 +1784,6 @@ ol.calendar__weekdays {
     padding: 0.5rem;
   }
 
-  .lg\:p-8 {
-    padding: 2rem;
-  }
-
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -1745,11 +1799,6 @@ ol.calendar__weekdays {
     padding-right: 8rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -1760,12 +1809,21 @@ ol.calendar__weekdays {
     padding-right: 2.5rem;
   }
 
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .lg\:pb-8 {
     padding-bottom: 2rem;
   }
 
   .lg\:text-justify {
     text-align: justify;
+  }
+
+  .lg\:align-middle {
+    vertical-align: middle;
   }
 
   .lg\:text-3xl {
@@ -1789,6 +1847,13 @@ ol.calendar__weekdays {
   .lg\:text-old-black {
     --tw-text-opacity: 1;
     color: rgb(60 64 69 / var(--tw-text-opacity));
+  }
+
+  .lg\:line-clamp-12 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 12;
   }
 }
 
@@ -1865,10 +1930,6 @@ ol.calendar__weekdays {
 
   .xl\:bg-opacity-0 {
     --tw-bg-opacity: 0;
-  }
-
-  .xl\:p-8 {
-    padding: 2rem;
   }
 
   .xl\:text-2xl {

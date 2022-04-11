@@ -12,7 +12,11 @@ module.exports = {
         'black': '#000000',
         'gray-1':'#e4e4e4'
     },
-    extend: {},
+    extend: {
+      lineClamp: {
+        12: '12',
+      }
+    },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'),],
 }
