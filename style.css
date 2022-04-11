@@ -882,6 +882,14 @@ html {
   margin-top: 10rem;
 }
 
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -1069,6 +1077,10 @@ html {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1095,6 +1107,10 @@ html {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .place-self-center {
@@ -1212,6 +1228,14 @@ html {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .py-2 {
@@ -1573,6 +1597,11 @@ ol.calendar__weekdays {
     margin-right: -2rem;
   }
 
+  .lg\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .lg\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -1607,6 +1636,14 @@ ol.calendar__weekdays {
 
   .lg\:ml-10 {
     margin-left: 2.5rem;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem;
   }
 
   .lg\:block {
@@ -1675,6 +1712,10 @@ ol.calendar__weekdays {
     width: 20rem;
   }
 
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
   .lg\:max-w-md {
     max-width: 28rem;
   }
@@ -1686,6 +1727,10 @@ ol.calendar__weekdays {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:flex-wrap {
@@ -1778,18 +1823,36 @@ ol.calendar__weekdays {
     line-height: 1.75rem;
   }
 
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:leading-10 {
     line-height: 2.5rem;
   }
 }
 
 @media (min-width: 1280px) {
+  .xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .xl\:h-96 {
     height: 24rem;
   }
 
   .xl\:h-12 {
     height: 3rem;
+  }
+
+  .xl\:h-\[360px\] {
+    height: 360px;
+  }
+
+  .xl\:h-\[420px\] {
+    height: 420px;
   }
 
   .xl\:max-h-\[100px\] {
@@ -1814,6 +1877,14 @@ ol.calendar__weekdays {
 
   .xl\:w-1\/2 {
     width: 50%;
+  }
+
+  .xl\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .xl\:w-3\/5 {
+    width: 60%;
   }
 
   .xl\:max-w-2xl {

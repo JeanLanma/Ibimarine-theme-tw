@@ -116,8 +116,8 @@
 
             <div class="text-white text-center">
                 <div class="w-4/5 mx-auto my-10">
-                    <p class="font-bold text-2xl my-5">¡Gracias por su Petición!</p>
-                    <p class=" text-xl">En menos de 12 horas,
+                    <p class="font-bold text-2xl lg:text-3xl my-5 lg:my-8">¡Gracias por su Petición!</p>
+                    <p class="text-xl lg:text-3xl lg:w-[50%] mx-auto">En menos de 12 horas,
                         nuestros comerciales
                         contactaran con Usted
                         para finalizar la reserva
@@ -128,6 +128,52 @@
 
             <div>
                 <button id="request_close" class="btn-gold">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- Photos - overlay -->
+    <div id="photos_overlay" class="fixed top-0 left-0 z-10  bg-old-black/95  h-screen w-full">
+
+        <!-- Overlay content -->
+        <div class="h-screen flex flex-col items-center text-center">
+            <div>
+                <div class="xl:w-3/5 mx-auto mt-32 lg:mt-16">
+                    <div class="h-56 xl:h-[420px] overflow-y-hidden">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/home/home-04.jpg" alt="Hero Slider Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-white text-center">
+                <div class="xl:w-3/5 xl:mx-auto p-5 grid grid-cols-3 lg:grid-cols-6 gap-2">
+                    <div>
+                        <img src="./img/rent/rent-01.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/rent/rent-01.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/rent/rent-01.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/rent/rent-01.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/rent/rent-01.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/rent/rent-01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button id="photos_close" class="btn-gold">Cerrar</button>
             </div>
         </div>
 
@@ -201,7 +247,7 @@
         <div>
 
             <!-- Slider Hero Image -->
-            <div class="xl:w-4/5 mx-auto">
+            <div id="photos_open" class="xl:w-4/5 mx-auto">
                 <div class="swiper main_img h-56 xl:h-96 overflow-y-hidden xl:rounded-t-xl">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -704,6 +750,25 @@
         function openMenu(e){
             e.preventDefault()
             requestOverlay.style.display = 'block';
+        }
+
+        // Phtos Overlay 
+
+        const closeOverlayPhotos = document.getElementById('photos_close');
+        const openPhotstBtn = document.getElementById('photos_open');
+        const photostOverlay = document.getElementById('photos_overlay');
+
+        closeOverlayPhotos.addEventListener('click', closeMenu);
+        openPhotstBtn.addEventListener('click', openMenu)
+
+        function closeMenu(e){
+            e.preventDefault()
+            photostOverlay.style.display = 'none';
+        }
+        
+        function openMenu(e){
+            e.preventDefault()
+            photostOverlay.style.display = 'block';
         }
     </script>
 
