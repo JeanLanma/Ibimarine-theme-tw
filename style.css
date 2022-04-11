@@ -1586,6 +1586,10 @@ ol.calendar__weekdays {
 }
 
 @media (min-width: 1024px) {
+  .lg\:-bottom-4 {
+    bottom: -1rem;
+  }
+
   .lg\:-order-1 {
     order: -1;
   }
@@ -1728,8 +1732,16 @@ ol.calendar__weekdays {
     width: 50%;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:max-w-md {
     max-width: 28rem;
+  }
+
+  .lg\:max-w-full {
+    max-width: 100%;
   }
 
   .lg\:columns-2 {
@@ -1778,6 +1790,10 @@ ol.calendar__weekdays {
     border-top-width: 4px;
   }
 
+  .lg\:border-none {
+    border-style: none;
+  }
+
   .lg\:border-b-old-gold {
     --tw-border-opacity: 1;
     border-bottom-color: rgb(170 161 115 / var(--tw-border-opacity));
@@ -1812,6 +1828,16 @@ ol.calendar__weekdays {
     padding-bottom: 0.5rem;
   }
 
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   .lg\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -1840,8 +1866,26 @@ ol.calendar__weekdays {
     line-height: 2rem;
   }
 
+  .lg\:font-bold {
+    font-weight: 700;
+  }
+
   .lg\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .lg\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+
+  .lg\:text-old-black {
+    --tw-text-opacity: 1;
+    color: rgb(60 64 69 / var(--tw-text-opacity));
+  }
+
+  .lg\:last\:ml-0:last-child {
+    margin-left: 0px;
   }
 }
 
@@ -1891,6 +1935,10 @@ ol.calendar__weekdays {
     max-height: 16rem;
   }
 
+  .xl\:max-h-full {
+    max-height: 100%;
+  }
+
   .xl\:w-4\/5 {
     width: 80%;
   }
@@ -1919,6 +1967,10 @@ ol.calendar__weekdays {
     max-width: 30rem;
   }
 
+  .xl\:max-w-full {
+    max-width: 100%;
+  }
+
   .xl\:justify-center {
     justify-content: center;
   }
@@ -1930,6 +1982,14 @@ ol.calendar__weekdays {
   .xl\:rounded-t-xl {
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
+  }
+
+  .xl\:bg-opacity-0 {
+    --tw-bg-opacity: 0;
+  }
+
+  .xl\:bg-none {
+    background-image: none;
   }
 
   .xl\:text-xl {
