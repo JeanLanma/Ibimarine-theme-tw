@@ -133,7 +133,7 @@
 
     </div>
     <!-- Photos - overlay -->
-    <div id="photos_overlay" class="fixed top-0 left-0 z-10  bg-old-black/95  h-screen w-full">
+    <div id="photos_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black/95  h-screen w-full">
 
         <!-- Overlay content -->
         <div class="h-screen flex flex-col items-center text-center">
@@ -730,7 +730,7 @@
         }
 
         function openMenu(){
-            menuMobile.style.display = 'block';
+            menuMobile.style.display = 'fixed';
         }
 
         // Request Overlay 
@@ -739,34 +739,34 @@
         const openRequestBtn = document.getElementById('request_open');
         const requestOverlay = document.getElementById('request_overlay');
 
-        closeOverlayRequest.addEventListener('click', closeMenu);
-        openRequestBtn.addEventListener('click', openMenu)
+        closeOverlayRequest.addEventListener('click', closeRequest);
+        openRequestBtn.addEventListener('click', openRequest)
 
-        function closeMenu(e){
+        function closeRequest(e){
             e.preventDefault()
             requestOverlay.style.display = 'none';
         }
         
-        function openMenu(e){
+        function openRequest(e){
             e.preventDefault()
             requestOverlay.style.display = 'block';
         }
 
         // Phtos Overlay 
 
-        const closeOverlayPhotos = document.getElementById('photos_close');
-        const openPhotstBtn = document.getElementById('photos_open');
+        const closePhotosBtn = document.getElementById('photos_close');
+        const openPhotostBtn = document.getElementById('photos_open');
         const photostOverlay = document.getElementById('photos_overlay');
 
-        closeOverlayPhotos.addEventListener('click', closeMenu);
-        openPhotstBtn.addEventListener('click', openMenu)
+        closePhotosBtn.addEventListener('click', closePhotos);
+        openPhotostBtn.addEventListener('click', openPhotos)
 
-        function closeMenu(e){
+        function closePhotos(e){
             e.preventDefault()
             photostOverlay.style.display = 'none';
         }
         
-        function openMenu(e){
+        function openPhotos(e){
             e.preventDefault()
             photostOverlay.style.display = 'block';
         }
