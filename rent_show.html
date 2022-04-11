@@ -11,29 +11,28 @@
 
     <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css"/>
 
-    <link rel="stylesheet" href="./css/calendar.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <!-- Section Header -->
-    <header class="container mt-8">
+    <header class="container mt-8 lg:mt-10">
 
         <div class="relative h-20">
-            <div class="absolute left-0 right-0 mx-auto w-56">
-                <img src="./img/home/home-logo_01.png" alt="Logo ibimarine">
+            <div class="absolute left-0 right-0 mx-auto w-56 lg:w-72">
+                <img src="./img/home/home-logo_01.png" alt="Logo Ibimarine">
             </div>
     
-            <div class="absolute right-0 top-0 mt-2 mr-5" id="menu_open">
+            <div class="absolute right-0 top-0 mt-2 mr-5 lg:hidden" id="menu_open">
                 <i class="text-3xl fa-solid fa-bars text-old-gold"></i>
             </div>
         </div>
 
-        <div class="block text-center">
+        <div class="block text-center lg:mt-6">
             <div>
                 <p class="font-bold text-old-black uppercase">Agente Oficial de Ibiza</p>
             </div>
-            <div class="columns-3xs flex justify-center gap-3 mt-1 mb-1">
+            <div class="columns-3xs flex justify-center gap-3 mt-1 mb-1 ">
                 <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
                 <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
                 <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
@@ -43,7 +42,6 @@
     </header>
 
     <!-- Section Menu Mobile -->
-
     <div id="menu_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black h-screen w-full">
 
         <header class="container mt-8">
@@ -61,7 +59,7 @@
         </header>
 
         <section>
-            <div class="border-y-2 border-old-gold w-4/5 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
+            <div class="border-y-2 border-old-gold w-4/5 lg:w-96 lg:h-56 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
                 <div class="w-16 flex items-center hover:opacity-100">
                     <div>
                         <img src="./img/lang_es.png" alt=""> 
@@ -103,23 +101,75 @@
 
     </div>
 
+    <!-- Section Menu Desktop -->
+    <div class="hidden lg:block">
+        <div class="w-4/5 mx-auto mt-8">
+            <ul class="flex justify-between text-old-black font-bold">
+                <li class="active-link py-1 px-7"><a class="uppercase text-sm " href="/"> Inicio </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/rent.html"> Alquiler </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/sale.html"> Venta </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/toys.html"> Toys </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/events.html"> Eventos </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/news.html"> Noticias </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/contact.html"> Contacto </a></li>
+                <li class=" py-1 pr-4"><a class="uppercase text-sm " href="/"> Area Privada </a></li>
+                <li class="flex">
+                    <a href="#" class="flex items-center mr-1">
+                        <img class="mr-1 w-4 h-3" src="./img/lang_es.png" alt="">
+                        <span>ES</span>
+                    </a>
+                    <span class="mr-1">|</span>
+                    <a href="#" class="flex items-center">
+                        <img class="mr-1 w-4 h-3" src="./img/lang_en.png" alt="">
+                        <span>EN</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Section Hero - Title -->
     <section class="mt-5">
-        <div class="border-y-4 border-old-gold py-2">
-           <p class="text-center text-old-black text-2xl uppercase font-bold">Alquiler de Yates</p>
+        <div class="border-y-4 border-old-gold py-2  lg:px-16 lg:mx-auto lg:w-max">
+           <p class="lg:hidden text-center text-old-black text-2xl uppercase font-bold">Alquiler de Yates</p>
+           <p class="hidden lg:block text-center text-old-black text-2xl uppercase font-bold">Sessa Marine c44</p>
         </div>
     </section>
 
+    <!-- Section Contact Only Desktop -->
+    <div class="w-full my-10 hidden lg:block">
+        <div class="flex justify-center items-center flex-col">
+            <div>
+                <p class="text-old-gold font-bold text-xl">
+                    ¡Contacta con nosotros!
+                </p>
+            </div>
+    
+            <div class="flex">
+                <div class="flex items-center">
+                    <img class="w-8 mr-1 h-[22px] " src="./img/lang_es.png" alt="">
+                    <p class="font-bold text-xl text-old-black">+34 650 020 215</p>
+                </div>
+                <div class="text-old-black mx-3 font-bold">&#124;</div>
+                <div class="flex items-center">
+                    <img class="w-8 mr-1 h-[22px] " src="./img/lang_en.png" alt="">
+                    <p class="font-bold text-xl text-old-black">+34 650 020 215</p>
+                </div>
+            </div>
+    
+        </div>
+        </div>
+
     <!-- Section Page content -->
 
-    <div class="container sm:flex sm:columns-2 sm:gap-1 md:gap-0 sm:justify-center sm:mx-auto">
+    <div class="container">
 
         <!-- Section Slides -->
         <div>
 
             <!-- Slider Hero Image -->
-            <div>
-                <div class="swiper main_img h-56 overflow-y-hidden ">
+            <div class="xl:w-4/5 mx-auto">
+                <div class="swiper main_img h-56 xl:h-96 overflow-y-hidden xl:rounded-t-xl">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="./img/home/home-04.jpg" alt="Hero Slider Image">
@@ -145,8 +195,8 @@
             </div>
 
             <!-- Slider thumbnails Carousel -->
-            <div class="flex mx-auto justify-center items-center my-2">
-                <div class="arrow w-1/12 h-6" id="arrowPrev">
+            <div class="xl:w-[50%] flex mx-auto justify-center items-center my-2">
+                <div class="arrow w-1/12 h-6 xl:h-12" id="arrowPrev">
                     <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="43.026 0 161.967 490" width="161.967" height="490">
                     <!-- <svg style="width: 1rem; height: auto; margin: 0 5px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="43.026 0 161.967 490" width="161.967" height="490"> -->
                         <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="204.993 0.285 204.993 490 43.026 244.36 204.72 0" bx:origin="0.525 0.496"/>
@@ -154,27 +204,27 @@
                 </div>
                 <div class="swiper thumbnails-row mx-auto w-10/12" thumbsSlider="">
                     <div class="swiper-wrapper flex">
-                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                        <div class="swiper-slide max-h-14 xl:max-h-[100px] overflow-y-hidden">
                             <img class="object-cover" src="./img/rent/rent-01.jpg" alt="thumbnail">
                         </div>
-                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                        <div class="swiper-slide max-h-14 xl:max-h-[100px] overflow-y-hidden">
                             <img class="object-cover" src="./img/rent/rent-02.jpeg" alt="thumbnail">
                         </div>
-                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                        <div class="swiper-slide max-h-14 xl:max-h-[100px] overflow-y-hidden">
                             <img class="object-cover" src="./img/rent/rent-03.jpeg" alt="thumbnail">
                         </div>
-                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                        <div class="swiper-slide max-h-14 xl:max-h-[100px] overflow-y-hidden">
                             <img class="object-cover" src="./img/rent/rent-01.jpg" alt="thumbnail">
                         </div>
-                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                        <div class="swiper-slide max-h-14 xl:max-h-[100px] overflow-y-hidden">
                             <img class="object-cover" src="./img/rent/rent-02.jpeg" alt="thumbnail">
                         </div>
-                        <div class="swiper-slide max-h-14 overflow-y-hidden">
+                        <div class="swiper-slide max-h-14 xl:max-h-[100px] overflow-y-hidden">
                             <img class="object-cover" src="./img/rent/rent-03.jpeg" alt="thumbnail">
                         </div>
                     </div>
                 </div>
-                <div class="arrow w-1/12 h-6" id="arrowNext">
+                <div class="arrow w-1/12 h-6 xl:h-12" id="arrowNext">
                     <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="51.124 -3.92 161.967 490" width="161.967" height="490">
                         <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="204.993 0.285 204.993 490 43.026 244.36 204.72 0" transform="matrix(-1, 0, 0, -1, 256.117344, 486.079994)" bx:origin="0.525 0.496"/>
                       </svg>
@@ -184,7 +234,7 @@
 
         <!-- Section Boat Title on Mobile -->
 
-        <div>
+        <div class="lg:hidden">
             <div class="bg-old-gold text-center w-11/12 mx-auto py-1 mt-6">
                 <h1 class="text-white text-xl font-bold">Sessa Marine c44</h1>
             </div>
@@ -194,33 +244,33 @@
         <div class="">
 
             <!-- yacht feauture icons -->
-            <div class="flex justify-evenly px-6 my-3 opacity-50">
+            <div class="flex justify-evenly xl:justify-center xl:gap-4 px-6 my-3 opacity-50">
 
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="" src="./img/yacht_icons/users.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">11+1</span>
                 </div>
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="" src="./img/yacht_icons/captain.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">Captain</span>
                 </div>
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="" src="./img/yacht_icons/air-conditioner.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">Air</span>
                 </div>
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="img-fluid" src="./img/yacht_icons/drinks.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">Drink</span>
                 </div>
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="img-fluid" src="./img/yacht_icons/sports.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">Sports</span>
                 </div>
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="img-fluid" src="./img/yacht_icons/shower.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">Shower</span>
                 </div>
-                <div class="w-7 flex flex-col justify-center items-center text-center">
+                <div class="w-7 lg:w-14 flex flex-col justify-center items-center text-center">
                     <img class="img-fluid" src="./img/yacht_icons/music.png" alt="feature icon">
                     <span class="yacht__icon-caption text-xs">Music</span>
                 </div>
@@ -228,7 +278,7 @@
             </div>
             
             <!-- yacht description -->
-            <div class="px-6 text-center">
+            <div class="mx-auto xl:text-xl xl:w-1/2 px-6 text-center text-old-black">
                 <p> 
                     Cras Venenatis porta ligula ses suscipit.
                     Ut in vehicula ex. Vivamus fermentum
@@ -244,107 +294,107 @@
                 </p>
             </div>
             <!-- yacht feature table -->
-            <div class="px-6">
+            <div class="mx-auto xl:w-1/2 px-6 ">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                         <table class="min-w-full">
                         <tbody table class="min-w-full">
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Length
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 14 m
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Beam
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 3,99 m
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Engines
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 2 x 500 Hp Volvo IPS
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Cruising Velocity
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 -
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Max Speed
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 35 N
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Mark
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Otto
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Mark
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Otto
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Mark
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Otto
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Mark
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Otto
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Mark
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Otto
                                 </td>
                             </tr>
 
                             <tr class="even:bg-gray-1 flex justify-between w-full px-3">
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Mark
                                 </td>
-                                <td class="text-sm text-old-black font-light">
+                                <td class="xl:text-xl text-sm text-old-black font-light">
                                 Otto
                                 </td>
                             </tr>
@@ -355,20 +405,83 @@
                 </div>
             </div>
 
-            <!-- Reservatio calendar -->
-            <div>
-                <div id="reservationCalendar">
+        </div>
 
+        <!-- Reservation calendar -->
+        <div class="lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+
+            <!-- Calendar plugin -->
+            <div class="lg:-mr-60">
+                <div class="text-center"><h2 class="text-lg text-old-black font-bold uppercase">Fecha de reserva</h2></div>
+
+                <div id="reservationCalendar">
+                    <div data-month-id="${monthId}" class="max-w-xs w-4/5 mx-auto hidden ${UCalendar.getMonthCalendarInfo().monthName === monthName ? 'calendar-active': ''}">
+                        <div class="bg-old-gold flex justify-center text-white h-11 items-center rounded-t-xl text-xl">
+                        <div class="calendar-left-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"></path></svg><!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com --></div>
+                            <div class="calendar__month_year mx-10">
+                            <span class="calendar__month text-capitalize">${monthName}</span>
+                            <span class="calendar__year">${year}</span>
+                            </div>
+                        <div class="calendar-right-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg><!-- <i class="fa-solid fa-chevron-right"></i> Font Awesome fontawesome.com --></div>
+                        </div>
+                        <div class="calendar__days-container border-x-2 border-b-2 border-old-black/60 rounded-b-xl text-old-black">
+                            <ol class="calendar__days text-center grid grid-cols-7 pb-3 px-0 text-xl text-old-black">
+                                ${this.HtmlWeekDays.join('')}
+                            </ol>
+                            <ol class="calendar__days calendar__numberDay text-center grid grid-cols-7 pb-3 px-0 text-xl">
+                            ${this.HtmlMonthDays.join('')}
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+
+            <!-- Pricing accord to Date -->
+
+            <div class="my-4 lg:-order-1 lg:col-span-2">
+                <div class="bg-old-gold mx-auto text-center w-64 lg:w-96 lg:p-2 text-white mb-4">
+                    <div><p class="text-xl lg:text-3xl">1.800&euro; / Dia  <span>(Jun o Sep)</span></p></div>
+                    <div><p class="lg:text-xl"><span>+ 21% </span> IVA + Combustible</p></div>
+                </div>
+
+                <div class="bg-gray-1 mx-auto text-center w-64 lg:w-96 lg:p-2 text-white">
+                    <div><p class="text-xl lg:text-3xl">1.800&euro; / Dia  <span>(Jun o Sep)</span></p></div>
+                    <div><p class="lg:text-xl"><span>+ 21% </span> IVA + Combustible</p></div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:ml-10 lg:w-80 w-4/5 mx-auto">
+                <form method="post" action="#" class="font-bold text-old-black">
+                    <div class="mb-4">
+                        <label class="block" for="name"> Nombre </label>
+                        <input class="w-full" type="text" name="name" id="">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block" for="email">Correo electronico</label>
+                        <input class="w-full" type="text" name="email" id="">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block" for="phone">Teléfono</label>
+                        <input class="w-full" type="text" name="phone" id="">
+                    </div>
+
+                    <div class="text-center">
+                        <input class="btn-gold" type="submit" value="Enviar Petición">
+                    </div>
+                </form>
+            </div>
+
         </div>
+
+
 
     </div>
 
     <!-- Section Contact -->
 
-    <div class="text-center">
+    <div class="text-center lg:hidden">
         <div class="m-0">
             <p class="text-old-gold text-xl font-bold">¡Contacta con nosotros!</p>
         </div>
@@ -381,22 +494,100 @@
         </div>
     </div>
 
-    <!-- Section footer -->
+    <!-- Section similar boats -->
 
-    <footer class="text-old-black text-center mx-auto">
-        <div>
-            <p>Derechos Reservados</p>
+    <section class="lg:w-4/5 lg:mx-auto mt-5">
+        <div class="w-2xl border-y-4 border-old-gold py-2  lg:px-16 lg:mx-auto">
+            <div>
+                <p class=" text-center text-old-black text-2xl uppercase font-bold">Embarcaciones Similares</p>
+            </div>            <!-- Slider thumbnails Carousel -->
+            <div class="flex mx-auto justify-center items-center my-2">
+                <div class="arrow w-1/12 h-6 xl:h-12" id="arrowPrev">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="43.026 0 161.967 490" width="161.967" height="490">
+                    <!-- <svg style="width: 1rem; height: auto; margin: 0 5px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="43.026 0 161.967 490" width="161.967" height="490"> -->
+                        <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="204.993 0.285 204.993 490 43.026 244.36 204.72 0" bx:origin="0.525 0.496"/>
+                    </svg>
+                </div>
+                <div class="swiper swiper-similar-boats mx-auto w-10/12" thumbsSlider="">
+                    <div class="swiper-wrapper flex">
+
+                        <div class="swiper-slide max-h-14 xl:max-h-48 overflow-y-hidden">
+                            <div class="h-[100px] overflow-y-hidden">
+                                <img class="object-cover" src="./img/rent/rent-01.jpg" alt="thumbnail">
+                            </div>
+                            <p class="text-center uppercase mt-2">cranchi 41</p>
+                        </div>
+
+                        <div class="swiper-slide max-h-14 xl:max-h-48 overflow-y-hidden">
+                            <div class="h-[100px] overflow-y-hidden">
+                                <img class="object-cover" src="./img/rent/rent-02.jpeg" alt="thumbnail">
+                            </div>
+                            <p class="text-center uppercase mt-2">cranchi 41</p>
+                        </div>
+
+                        <div class="swiper-slide max-h-14 xl:max-h-48 overflow-y-hidden">
+                            <div class="h-[100px] overflow-y-hidden">
+                                <img class="object-cover" src="./img/rent/rent-03.jpeg" alt="thumbnail">
+                            </div>
+                            <p class="text-center uppercase mt-2">cranchi 41</p>
+                        </div>
+                        
+                        <div class="swiper-slide max-h-14 xl:max-h-48 overflow-y-hidden">
+                            <div class="h-[100px] overflow-y-hidden">
+                                <img class="object-cover" src="./img/rent/rent-01.jpg" alt="thumbnail">
+                            </div>
+                            <p class="text-center uppercase mt-2">cranchi 41</p>
+                        </div>
+
+                        <div class="swiper-slide max-h-14 xl:max-h-48 overflow-y-hidden">
+                            <div class="h-[100px] overflow-y-hidden">
+                                <img class="object-cover" src="./img/rent/rent-02.jpeg" alt="thumbnail">
+                            </div>
+                            <p class="text-center uppercase mt-2">cranchi 41</p>
+                        </div>
+
+                        <div class="swiper-slide max-h-14 xl:max-h-48 overflow-y-hidden">
+                            <div class="h-[100px] overflow-y-hidden">
+                                <img class="object-cover" src="./img/rent/rent-03.jpeg" alt="thumbnail">
+                            </div>
+                            <p class="text-center uppercase mt-2">cranchi 41</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="arrow w-1/12 h-6 xl:h-12" id="arrowNext">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="51.124 -3.92 161.967 490" width="161.967" height="490">
+                        <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="204.993 0.285 204.993 490 43.026 244.36 204.72 0" transform="matrix(-1, 0, 0, -1, 256.117344, 486.079994)" bx:origin="0.525 0.496"/>
+                      </svg>
+                </div>
+            </div>
         </div>
-        <div>
-            <p class="inline">Términos y condiciones</p> - <p class="inline">Política de Privacidad</p>
-        </div>
-        <div>
-            <p class="inline">Política de cookies</p> - <p class="inline">Protección de datos</p>
-        </div>
-        <div>
-            <p> <b>IBIMARINE &copy;</b> </p>
-        </div>
-    </footer>
+    </section>
+
+
+
+ <!-- Section footer -->
+
+ <footer class="text-old-black text-center mx-auto lg:flex lg:my-10 lg:w-4/5  lg:gap-4   lg:border-t-4 lg:border-t-old-gold lg:pt-8">
+    <div class="lg:hidden">
+        <p>Derechos Reservados</p>
+    </div>
+    <div>
+        <p class="inline">Términos y condiciones</p> - <p class="inline">Política de Privacidad</p>
+    </div>
+    <div>
+        <p class="inline">Política de cookies</p> - <p class="inline">Protección de datos</p>
+    </div>
+    <div class="lg:-order-1">
+        <p> <b>IBIMARINE &copy;</b> </p>
+    </div>
+
+    <div class="ml-36 hidden lg:justify-self-end lg:flex">
+        <p class="mr-5">Find US: </p>
+        <a href="#" class="text-old-gold"><i class="fa-brands fa-facebook-square mr-3"></i></a>
+        <a href="#" class="text-old-gold"><i class="fa-brands fa-instagram-square "></i></a>
+    </div>
+</footer>
 
     <!-- Calendar Script -->
     <script src="./js/calenMod.js"></script>
@@ -412,7 +603,12 @@
         const slideMainThumbs = new Swiper('.thumbnails-row', {
             slidesPerView: 3,
             spaceBetween: 5,
-            watchSlidesProgress: true,
+            breakpoints : {
+                640: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                    }
+            }
         })
 
         const slideMain = new Swiper('.main_img', {
@@ -432,11 +628,16 @@
 
         // Similar boats slide
 
-        // const slideSimilarBoats = new Swiper('.swiper-similar-boats' , {
-        //     width: 110,
-        //     spaceBetween: 10,
-        //     centeredSlidesBounds: true
-        // })
+        const slideSimilarBoats = new Swiper('.swiper-similar-boats' , {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            centeredSlidesBounds: true,
+            breakpoints : {
+                640: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                    },
+        }})
 
 
         // Menu mobile

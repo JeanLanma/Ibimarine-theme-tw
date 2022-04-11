@@ -46,6 +46,10 @@
 .active-link {
     @apply text-white bg-old-gold;
 }
+
+.btn-gold {
+    @apply text-white bg-old-gold py-2 px-6 rounded-xl text-lg;
+}
 }
 
 /* Custome styles */
@@ -58,16 +62,8 @@
     @apply bg-old-gold text-white py-1;
 }
 
-.reservation__calendar {
-    margin-top: 3rem;
-}
-
-.reservation__calendar>h2 {
-    @apply text-lg mb-1;
-}
-
 .calendar-front {
-    @apply mx-auto max-w-xs border-y border-x border-old-black/75;
+    @apply mx-auto rounded-b-xl max-w-xs border-y border-x border-old-black/75;
 }
 
 .calendar__header {
@@ -85,14 +81,6 @@ ol.calendar__weekdays {
 
 .calendar__weekdays .weekday-name {
     @apply text-xl;
-}
-
-.calendar__days-container {
-
-    @apply border-x-2 border-b-2 border-old-black rounded-b-sm;
-}
-ol.calendar__days {
-    @apply text-center grid grid-cols-7 pt-2 pb-3 px-0 text-xl;
 }
 
 .day-name {

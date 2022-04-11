@@ -14,23 +14,23 @@
 <body>
 
     <!-- Section Header -->
-    <header class="container mt-8">
+    <header class="container mt-8 lg:mt-10">
 
         <div class="relative h-20">
-            <div class="absolute left-0 right-0 mx-auto w-56">
-                <img src="./img/home/home-logo_01.png" alt="Logo ibimarine">
+            <div class="absolute left-0 right-0 mx-auto w-56 lg:w-72">
+                <img src="./img/home/home-logo_01.png" alt="Logo Ibimarine">
             </div>
     
-            <div class="absolute right-0 top-0 mt-2 mr-5" id="menu_open">
+            <div class="absolute right-0 top-0 mt-2 mr-5 lg:hidden" id="menu_open">
                 <i class="text-3xl fa-solid fa-bars text-old-gold"></i>
             </div>
         </div>
 
-        <div class="block text-center">
+        <div class="block text-center lg:mt-6">
             <div>
                 <p class="font-bold text-old-black uppercase">Agente Oficial de Ibiza</p>
             </div>
-            <div class="columns-3xs flex justify-center gap-3 mt-1 mb-1">
+            <div class="columns-3xs flex justify-center gap-3 mt-1 mb-1 ">
                 <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
                 <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
                 <a href="#" ><img class="w-14" src="img/sessa.png" alt="brand imgage"></a>
@@ -100,83 +100,135 @@
 
     </div>
 
+    <!-- Section Menu Desktop -->
+    <div class="hidden lg:block">
+        <div class="w-4/5 mx-auto mt-8">
+            <ul class="flex justify-between text-old-black font-bold">
+                <li class="active-link py-1 px-7"><a class="uppercase text-sm " href="/"> Inicio </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/rent.html"> Alquiler </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/sale.html"> Venta </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/toys.html"> Toys </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/events.html"> Eventos </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/news.html"> Noticias </a></li>
+                <li class=" py-1 px-7"><a class="uppercase text-sm " href="/contact.html"> Contacto </a></li>
+                <li class=" py-1 pr-4"><a class="uppercase text-sm " href="/"> Area Privada </a></li>
+                <li class="flex">
+                    <a href="#" class="flex items-center mr-1">
+                        <img class="mr-1 w-4 h-3" src="./img/lang_es.png" alt="">
+                        <span>ES</span>
+                    </a>
+                    <span class="mr-1">|</span>
+                    <a href="#" class="flex items-center">
+                        <img class="mr-1 w-4 h-3" src="./img/lang_en.png" alt="">
+                        <span>EN</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Section Hero - Title -->
     <section class="my-5">
-        <div class="border-y-4 border-old-gold py-2">
+        <div class="border-y-4 border-old-gold py-2  lg:px-16 lg:mx-auto lg:w-max">
            <p class="text-center text-old-black text-2xl uppercase font-bold">Alquiler de Yates</p>
         </div>
     </section>
 
+        <!-- Section Contact Only Desktop -->
+
+    <div class="w-full my-10 hidden lg:block">
+        <div class="flex justify-center items-center flex-col">
+            <div>
+                <p class="text-old-gold font-bold text-xl">
+                    ¡Contacta con nosotros!
+                </p>
+            </div>
+    
+            <div class="flex">
+                <div class="flex items-center">
+                    <img class="w-8 mr-1 h-[22px] " src="./img/lang_es.png" alt="">
+                    <p class="font-bold text-xl text-old-black">+34 650 020 215</p>
+                </div>
+                <div class="text-old-black mx-3 font-bold">&#124;</div>
+                <div class="flex items-center">
+                    <img class="w-8 mr-1 h-[22px] " src="./img/lang_en.png" alt="">
+                    <p class="font-bold text-xl text-old-black">+34 650 020 215</p>
+                </div>
+            </div>
+    
+        </div>
+        </div>
+
     <!-- Section Page content -->
 
-    <div class="container sm:flex sm:columns-2 sm:gap-1 md:gap-0 sm:justify-center sm:mx-auto">
+    <div class="container lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:gap-x-10 lg:w-4/5 lg:border-b-4 lg:border-b-old-gold lg:pb-8">
 
-        <!-- Cards -->
-            <div class="w-4/5 mx-auto my-6 md:max-w-[340px] sm:max-w-[300px] lg:max-w-md">
-                <!-- Card Head -->
-                <div class="relative">
+    <!-- Cards -->
+        <div class="w-4/5 mx-auto my-6 md:max-w-[340px] sm:max-w-[300px] lg:max-w-md">
+            <!-- Card Head -->
+            <div class="relative lg:h-56">
 
-                    <!-- Recomended Label -->
-                    <span class="absolute top-0 right-0 h-[150px] w-[150px] flex justify-center items-center overflow-hidden before:content-['Recomended'] before:absolute before:h-[30px] before:w-[150%] before:bg-old-gold before:rotate-45 before:-translate-y-[26px] before:translate-x-[30px] before:flex before:justify-center before:items-center before:uppercase before:font-bold before:text-white before:text-sm"></span>
+                <!-- Recomended Label -->
+                <span class="absolute top-0 right-0 h-[150px] w-[150px] flex justify-center items-center overflow-hidden before:content-['Recomended'] before:absolute before:h-[30px] before:w-[150%] before:bg-old-gold before:rotate-45 before:-translate-y-[26px] before:translate-x-[30px] before:flex before:justify-center before:items-center before:uppercase before:font-bold before:text-white before:text-sm"></span>
 
-                    <div class="rounded-t-lg max-h-[200px] overflow-y-hidden">
-                        <img class="rounded-t-[12px]"  src="./img//home/home-04.jpg" alt="">
-                    </div>
-                    <div class="absolute bottom-0 h-8 bg-old-gold w-full text-center">
-                        <p class="text-white leading-8 text-lg uppercase">Alquiler de Yates</p>
-                    </div>
+                <div class="rounded-t-lg max-h-[200px] overflow-y-hidden">
+                    <img class="rounded-t-[12px]"  src="./img//home/home-04.jpg" alt="">
                 </div>
-                <!-- Card body -->
-                <div class="border-x-2 border-b-2 border-old-gold p-4 text-center text-old-black">
-                    <div>
-                        <p class="text-sm">
-                            Cras venenatis porta ligula sed suscipit.
-                            Ut in vehicula ex. Vivamus fermentum nunc mi,
-                            ac condimentum magna porttitor faucibus.
-                        </p>
-                    </div>
-                    <div class="flex justify-center my-5">
-                        <div class="w-12"><img class="w-full" src="img/sessa.png" alt="brand imgage"></div>
-                        <p class="card-text text-color-black font-bold">Desde <span class="price">1.800</span><span class="currency">€</span> / Día</p>
-                    </div>
-                    <div>
-                        <a href=""><button class="bg-old-gold text-white py-1 px-5 rounded-lg">Reservar</button></a>
-                    </div>
+                <div class="absolute bottom-0 h-8 bg-old-gold w-full text-center">
+                    <p class="text-white leading-8 text-lg uppercase">Alquiler de Yates</p>
                 </div>
-
-
             </div>
-        <!-- Cards -->
-            <div class="w-4/5 mx-auto my-6 md:max-w-[340px] sm:max-w-[300px] lg:max-w-md">
-                <!-- Card Head -->
-                <div class="relative">
-                    <div class="rounded-t-lg max-h-[200px] overflow-y-hidden">
-                        <img class="rounded-t-[12px]"  src="./img//home/home-04.jpg" alt="">
-                    </div>
-                    <div class="absolute bottom-0 h-8 bg-old-gold w-full text-center">
-                        <p class="text-white leading-8 text-lg uppercase">Alquiler de Yates</p>
-                    </div>
+            <!-- Card body -->
+            <div class="border-x-2 border-b-2 border-old-gold p-4 text-center text-old-black">
+                <div>
+                    <p class="text-sm">
+                        Cras venenatis porta ligula sed suscipit.
+                        Ut in vehicula ex. Vivamus fermentum nunc mi,
+                        ac condimentum magna porttitor faucibus.
+                    </p>
                 </div>
-                <!-- Card body -->
-                <div class="border-x-2 border-b-2 border-old-gold p-4 text-center text-old-black">
-                    <div>
-                        <p class="text-sm">
-                            Cras venenatis porta ligula sed suscipit.
-                            Ut in vehicula ex. Vivamus fermentum nunc mi,
-                            ac condimentum magna porttitor faucibus.
-                        </p>
-                    </div>
-                    <div class="flex justify-center my-5">
-                        <div class="w-12"><img class="w-full" src="img/sessa.png" alt="brand imgage"></div>
-                        <p class="card-text text-color-black font-bold">Desde <span class="price">1.800</span><span class="currency">€</span> / Día</p>
-                    </div>
-                    <div>
-                        <a href=""><button class="bg-old-gold text-white py-1 px-5 rounded-lg">Reservar</button></a>
-                    </div>
+                <div class="flex justify-center my-5">
+                    <div class="w-12"><img class="w-full" src="img/sessa.png" alt="brand imgage"></div>
+                    <p class="card-text text-color-black font-bold">Desde <span class="price">1.800</span><span class="currency">€</span> / Día</p>
                 </div>
-
-
+                <div>
+                    <a href=""><button class="bg-old-gold text-white py-1 px-5 rounded-lg">Reservar</button></a>
+                </div>
             </div>
+
+
+        </div>
+    <!-- Cards -->
+        <div class="w-4/5 mx-auto my-6 md:max-w-[340px] sm:max-w-[300px] lg:max-w-md">
+            <!-- Card Head -->
+            <div class="relative lg:h-56">
+                <div class="rounded-t-lg max-h-[200px] overflow-y-hidden">
+                    <img class="rounded-t-[12px]"  src="./img//home/home-04.jpg" alt="">
+                </div>
+                <div class="absolute bottom-0 h-8 bg-old-gold w-full text-center">
+                    <p class="text-white leading-8 text-lg uppercase">Alquiler de Yates</p>
+                </div>
+            </div>
+            <!-- Card body -->
+            <div class="border-x-2 border-b-2 border-old-gold p-4 text-center text-old-black">
+                <div>
+                    <p class="text-sm">
+                        Cras venenatis porta ligula sed suscipit.
+                        Ut in vehicula ex. Vivamus fermentum nunc mi,
+                        ac condimentum magna porttitor faucibus.
+                    </p>
+                </div>
+                <div class="flex justify-center my-5">
+                    <div class="w-12"><img class="w-full" src="img/sessa.png" alt="brand imgage"></div>
+                    <p class="card-text text-color-black font-bold">Desde <span class="price">1.800</span><span class="currency">€</span> / Día</p>
+                </div>
+                <div>
+                    <a href=""><button class="bg-old-gold text-white py-1 px-5 rounded-lg">Reservar</button></a>
+                </div>
+            </div>
+
+
+        </div>
 
     </div>
 
@@ -197,8 +249,9 @@
 
     <!-- Section footer -->
 
-    <footer class="text-old-black text-center mx-auto">
-        <div>
+
+    <footer class="text-old-black text-center mx-auto lg:flex lg:my-10 lg:w-4/5  lg:gap-4">
+        <div class="lg:hidden">
             <p>Derechos Reservados</p>
         </div>
         <div>
@@ -207,8 +260,14 @@
         <div>
             <p class="inline">Política de cookies</p> - <p class="inline">Protección de datos</p>
         </div>
-        <div>
+        <div class="lg:-order-1">
             <p> <b>IBIMARINE &copy;</b> </p>
+        </div>
+
+        <div class="ml-36 hidden lg:justify-self-end lg:flex">
+            <p class="mr-5">Find US: </p>
+            <a href="#" class="text-old-gold"><i class="fa-brands fa-facebook-square mr-3"></i></a>
+            <a href="#" class="text-old-gold"><i class="fa-brands fa-instagram-square "></i></a>
         </div>
     </footer>
 
