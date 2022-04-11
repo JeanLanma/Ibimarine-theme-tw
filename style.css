@@ -1260,6 +1260,10 @@ html {
   padding-bottom: 0.75rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1842,6 +1846,14 @@ ol.calendar__weekdays {
 
   .lg\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .lg\:leading-6 {
+    line-height: 1.5rem;
+  }
+
+  .lg\:leading-4 {
+    line-height: 1rem;
   }
 
   .lg\:text-old-black {
