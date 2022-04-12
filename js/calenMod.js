@@ -145,13 +145,14 @@ const UDatePicker = function(UcalendarParsed){
         this.savedDates.push(ParsedDate);
     };
     this.pickDate = function(ParsedDate){
-      this.events.emit('pickDate');
 
       if(ParsedDate.hasOwnProperty('dateElement')) {
           let classToggle = ParsedDate.dateElement.classList.toggle('calendar__day-selected');
           const isRepeteated = UCalendar.isDuplicatedDate(this.savedDates,ParsedDate);
           if(isRepeteated === -1){
             this.savedDates.push(ParsedDate);
+            this.events.emit('pickDate');
+
           }else {
             this.savedDates.splice(isRepeteated, 1);
           }
@@ -320,7 +321,8 @@ const UICustomeFullCalendar = function({Year, target, onDayClicked, onEmptyDates
 
             /* Calendar API Functions */
 
-            if(typeof onDayClicked === 'function' && onDayClicked(these)){
+            if(typeof onDayClicked === 'function' && pickedDays.savedDates.length >= 1){
+                onDayClicked();
                 pickedDays.onPickDate(onDayClicked);
             }
             if(typeof onEmptyDates === 'function'){
