@@ -139,7 +139,7 @@
 
     <!-- Section Page content -->
 
-    <div class="container lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
+    <div id="reservationContainer" class="container lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
 
         <!-- add reservation -->
 
@@ -161,6 +161,17 @@
 
                     <!-- Input accordion -->
                     <div class="border border-old-black">
+                        <div class="hidden">
+                            <select name="boat" id="boat">
+                                <option value="1">Van Dautch 40</option>
+                                <option value="2">Sessa Marine c44</option>
+                                <option value="3">Predator 82</option>
+                                <option value="4">Pardo 43</option>
+                                <option value="5">Astromar</option>
+                                <option value="6">Sessa 52</option>
+                                <option value="0">Otro</option>
+                            </select>
+                        </div>
                         <!-- Arrow Down -->
                         <div data-target-accordion="boat" class="px-2 py-1 flex items-center justify-items-start transition duration-300">
                             <div class="w-3 mr-3">
@@ -168,30 +179,30 @@
                                     <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="374.29 -152.505 374.29 337.21 184.29 91.571 373.97 -152.79" transform="matrix(0.000001, -1, 1, 0.000001, 193.789711, 374.289918)" bx:origin="0.525 0.496"></polyline>
                                 </svg>
                             </div>
-                            <p class="h-auto w-full">
+                            <p id="boatTextContent" class="h-auto w-full">
                                 Embarcación
                             </p>
                         </div>
                         <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
-                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 1, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Van Dautch 40</p>
                             </div>
-                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 2, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Sessa Marine c44</p>
                             </div>
-                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 3, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Predator 82</p>
                             </div>
-                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 4, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Pardo 43</p>
                             </div>
-                            <div class="opacity-40 border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 5, 'boatTextContent')" class="opacity-40 border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Astromar</p>
                             </div>
-                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 6, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Sessa 52</p>
                             </div>
-                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 0, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>OTRO</p>
                             </div>
                         </div>
@@ -216,7 +227,8 @@
                     <div class="border border-old-black">
                         <div class="hidden">
                             <select name="status" id="status">
-                                <option value="1">Status</option>
+                                <option value="0">Stand By</option>
+                                <option value="1">Comfirmed</option>
                             </select>
                         </div>
                         <!-- accordion head -->
@@ -226,13 +238,13 @@
                                     <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="374.29 -152.505 374.29 337.21 184.29 91.571 373.97 -152.79" transform="matrix(0.000001, -1, 1, 0.000001, 193.789711, 374.289918)" bx:origin="0.525 0.496"></polyline>
                                 </svg>
                             </div>
-                            <p class="h-auto w-full">
+                            <p class="h-auto w-full" id="statusTextContent">
                                 Status
                             </p>
                         </div>
                         <!-- accordion body -->
                         <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
-                            <div onclick="getFormValue(this)" class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation','status', 0, 'statusTextContent')" class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
                                 <div class="w-3 ">
                                     <svg class="text-[#ffba00]" style="width: 100%; height: auto; display: inline;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                         <circle fill="currentcolor" cx="50" cy="50" r="50"/>
@@ -240,7 +252,7 @@
                                 </div>
                                 <p>Stand By</p>
                             </div>
-                            <div class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation','status', 1,'statusTextContent')" class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
                                 <div class="w-3 ">
                                     <svg class="text-[#0fd821]" style="width: 100%; height: auto; display: inline;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                         <circle fill="currentcolor" cx="50" cy="50" r="50"/>
@@ -259,7 +271,7 @@
                     <!-- Text Area -->
 
                     <div class="my-4">
-                        <textarea class="w-full" name="observations" id="observations" placeholder="Observaciones:"></textarea>
+                        <textarea class="w-full outline-[#aaa173]" name="observations" id="observations" placeholder="Observaciones:"></textarea>
                     </div>
 
                     <!-- Submit -->
@@ -301,36 +313,53 @@
     <script>
         const accordions = document.querySelectorAll('[data-target-accordion]');
 
+        const ReserVAtionContainer = document.getElementById('reservationContainer');
+
         for(let i = 0; i < accordions.length; i++){
-            accordions[i].addEventListener('click', function(){
+            accordions[i].addEventListener('click', function(e){
                 const accordionBody = accordions[i].nextElementSibling;
 
                 const accordion = accordionBody.style.maxHeight
                             ? accordionBody.style.maxHeight = null
                             : accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
             
-        })}
+        })
+    }
     </script>
 
     <script>
 
-        function getFormValue(el){
-            console.log(el)
+        function setFormValue(formId, targetInput, value, targetLabel){
+            const form = document.getElementById(formId);
+            document.querySelector('[data-target-accordion="'+targetInput+'"]').nextElementSibling.style.maxHeight = null;
+            if(form){
+                form[targetInput].value = value;
+            }
+            if(targetLabel){
+                if(form[targetInput].options && form[targetInput].selectedIndex){
+                    document.getElementById(targetLabel).textContent = form[targetInput].options[form[targetInput].selectedIndex].text;
+                    return true;
+                }
+                document.getElementById(targetLabel).textContent = form[targetInput].value;
+            }
+            return false;
         }
         const form = document.getElementById('form-add-reservation');
         const status = document.querySelector('[data-target-accordion="status"]');
-            status.parentElement.addEventListener('click', function(e){
-                console.log(e.target);
-            })
-            const statusValue = status.parentElement.querySelector('[name="status"]').value;
-
+        const boat = document.querySelector('[data-target-accordion="boat"]');
+            
         form.addEventListener('submit', function(e){
             e.preventDefault();
+            const statusValue = status.parentElement.querySelector('[name="status"]').value;
+            const boatValue = boat.parentElement.querySelector('[name="boat"]').value;
 
-            console.log(statusValue);
+            console.log('The boat id is: ',boatValue);
+            console.log('The status value ( 0 is stand By, 1 is Confirmed ) is: ',statusValue);
             console.log(this.client.value);
             console.log(this.phone.value);
             console.log(this.observations.value);
+
+            alert('Client Name: '+ this.client.value + 'Client Phone: '+ this.phone.value + 'The status value ( 0 is stand By, 1 is Confirmed ) is: ' + (statusValue ?? 'standBy') +' The boat id is: ' + boatValue + 'Some observations: ' + this.observations.value);
         })
     </script>
 
