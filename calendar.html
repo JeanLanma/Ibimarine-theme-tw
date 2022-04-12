@@ -80,19 +80,21 @@
         </section>
 
         <section>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Home</p></a>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Alquiler</p></a>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Venta</p></a>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Complementos</p></a>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Eventos</p></a>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Noticias</p></a>
-            <a href="#"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Contacto</p></a>
+            <a href="/"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Home</p></a>
+            <a href="/rent.html"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Alquiler</p></a>
+            <a href="/sale.html"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Venta</p></a>
+            <a href="/toys.html"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Toys</p></a>
+            <a href="/events.html"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Eventos</p></a>
+            <a href="/news.html"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Noticias</p></a>
+            <a href="/contact.html"><p class="text-2xl text-white font-bold my-6 text-center uppercase">Contacto</p></a>
         </section>
 
         <section>
             <div class="border-y-2 border-old-gold w-4/5 mx-auto flex justify-center gap-4 columns-2 text-white py-2">
                 <div>
-                    <p class="font-bold text-2xl">Área Privada</p>
+                    <a href="/calendar.html">
+                        <p class="font-bold text-2xl">Área Privada</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -141,61 +143,63 @@
 
     <div>
 
-        <div id="reservationCalendar"></div>
-        <div class="reservation-calendar w-80 mx-auto font-bold">
-            <!-- Calendar Head -->
-            <div class="flex justify-center text-old-black h-11 items-center rounded-t-xl text-xl">
-                <div class="calendar-left-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"></path></svg><!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com --></div>
-                  <div class="calendar__month_year font-bold mx-10">
-                    <span class="calendar__month text-capitalize">April</span>
-                    <span class="calendar__year">2022</span>
-                  </div>
-                <div class="calendar-right-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg><!-- <i class="fa-solid fa-chevron-right"></i> Font Awesome fontawesome.com --></div>
-            </div>
-            <!-- Calendar Body -->
-            <div class="reservation_calendar__days-container text-center text-old-black">
-                <ol class="calendar__days text-center grid grid-cols-7 pb-3 px-0 text-xl text-old-black">
-                    <li class='day-name'>M</li>
-                    <li class='day-name'>T</li>
-                    <li class='day-name'>W</li>
-                    <li class='day-name'>T</li>
-                    <li class='day-name'>F</li>
-                    <li class='day-name'>S</li>
-                    <li class='day-name'>S</li>
-                </ol>
-                <ol class="calendar__days calendar__numberDay text-center grid gap-y-6 gap-x-1 grid-cols-7 pb-3 px-0 text-xl">
-                  <li class='first-day border border-[#c2c2c4] month-day' style="--first-day-start: 4">1</li>
-                  <li class="month-day border border-[#c2c2c4]">2</li>
-                  <li class="month-day border border-[#c2c2c4]">3</li>
-                  <li class="month-day border border-[#c2c2c4]">4</li>
-                  <li class="month-day border border-[#c2c2c4]">5</li>
-                  <li class="month-day border border-[#c2c2c4]">6</li>
-                  <li class="month-day border border-[#c2c2c4]">7</li>
-                  <li class="month-day border border-[#c2c2c4]">8</li>
-                  <li class="month-day border border-[#c2c2c4]">9</li>
-                  <li class="month-day border border-[#c2c2c4]">10</li>
-                  <li class="month-day border border-[#c2c2c4]">11</li>
-                  <li class="month-day border border-[#c2c2c4]">12</li>
-                  <li class="month-day border border-[#c2c2c4]">13</li>
-                  <li class="month-day border border-[#c2c2c4]">14</li>
-                  <li class="month-day border border-[#c2c2c4]">15</li>
-                  <li class="month-day border border-[#c2c2c4]">16</li>
-                  <li class="month-day border border-[#c2c2c4]">17</li>
-                  <li class="month-day border border-[#c2c2c4]">18</li>
-                  <li class="month-day border border-[#c2c2c4]">19</li>
-                  <li class="month-day border border-[#c2c2c4]">20</li>
-                  <li class="month-day border border-[#c2c2c4]">21</li>
-                  <li class="month-day border border-[#c2c2c4]">22</li>
-                  <li class="month-day border border-[#c2c2c4]">23</li>
-                  <li class="month-day border border-[#c2c2c4]">24</li>
-                  <li class="month-day border border-[#c2c2c4]">25</li>
-                  <li class="month-day border border-[#c2c2c4]">26</li>
-                  <li class="month-day border border-[#c2c2c4]">27</li>
-                  <li class="month-day border border-[#c2c2c4]">28</li>
-                  <li class="month-day border border-[#c2c2c4]">29</li>
-                  <li class="month-day border border-[#c2c2c4]">30</li>
-                  <li class="month-day border border-[#c2c2c4]">31</li>
-                </ol>
+        <div id="reservationCalendar">
+
+            <div class="reservation-calendar w-80 mx-auto font-bold">
+                <!-- Calendar Head -->
+                <div class="flex justify-center text-old-black h-11 items-center rounded-t-xl text-xl">
+                    <div class="calendar-left-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"></path></svg><!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com --></div>
+                      <div class="calendar__month_year font-bold mx-10">
+                        <span class="calendar__month text-capitalize">April</span>
+                        <span class="calendar__year">2022</span>
+                      </div>
+                    <div class="calendar-right-arrow cursor-pointer"><svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg><!-- <i class="fa-solid fa-chevron-right"></i> Font Awesome fontawesome.com --></div>
+                </div>
+                <!-- Calendar Body -->
+                <div class="reservation_calendar__days-container text-center text-old-black">
+                    <ol class="calendar__days text-center grid grid-cols-7 pb-3 px-0 text-xl text-old-black">
+                        <li class='day-name'>M</li>
+                        <li class='day-name'>T</li>
+                        <li class='day-name'>W</li>
+                        <li class='day-name'>T</li>
+                        <li class='day-name'>F</li>
+                        <li class='day-name'>S</li>
+                        <li class='day-name'>S</li>
+                    </ol>
+                    <ol class="calendar__days calendar__numberDay text-center grid gap-y-6 gap-x-1 grid-cols-7 pb-3 px-0 text-xl">
+                      <li class='first-day border border-[#c2c2c4] month-day' style="--first-day-start: 4">1</li>
+                      <li class="month-day border border-[#c2c2c4]">2</li>
+                      <li class="month-day border border-[#c2c2c4]">3</li>
+                      <li class="month-day border border-[#c2c2c4]">4</li>
+                      <li class="month-day border border-[#c2c2c4]">5</li>
+                      <li class="month-day border border-[#c2c2c4]">6</li>
+                      <li class="month-day border border-[#c2c2c4]">7</li>
+                      <li class="month-day border border-[#c2c2c4]">8</li>
+                      <li class="month-day border border-[#c2c2c4]">9</li>
+                      <li class="month-day border border-[#c2c2c4]">10</li>
+                      <li class="month-day border border-[#c2c2c4]">11</li>
+                      <li class="month-day border border-[#c2c2c4]">12</li>
+                      <li class="month-day border border-[#c2c2c4]">13</li>
+                      <li class="month-day border border-[#c2c2c4]">14</li>
+                      <li class="month-day border border-[#c2c2c4]">15</li>
+                      <li class="month-day border border-[#c2c2c4]">16</li>
+                      <li class="month-day border border-[#c2c2c4]">17</li>
+                      <li class="month-day border border-[#c2c2c4]">18</li>
+                      <li class="month-day border border-[#c2c2c4]">19</li>
+                      <li class="month-day border border-[#c2c2c4]">20</li>
+                      <li class="month-day border border-[#c2c2c4]">21</li>
+                      <li class="month-day border border-[#c2c2c4]">22</li>
+                      <li class="month-day border border-[#c2c2c4]">23</li>
+                      <li class="month-day border border-[#c2c2c4]">24</li>
+                      <li class="month-day border border-[#c2c2c4]">25</li>
+                      <li class="month-day border border-[#c2c2c4]">26</li>
+                      <li class="month-day border border-[#c2c2c4]">27</li>
+                      <li class="month-day border border-[#c2c2c4]">28</li>
+                      <li class="month-day border border-[#c2c2c4]">29</li>
+                      <li class="month-day border border-[#c2c2c4]">30</li>
+                      <li class="month-day border border-[#c2c2c4]">31</li>
+                    </ol>
+                </div>
             </div>
         </div>
 
@@ -207,10 +211,10 @@
         <!-- buttons -->
         <div class="mx-auto mt-5 text-center flex justify-center gap-3">
             <div>
-                <input class="btn-on" type="submit" value="Ver">
+                <input id="see_date" class="btn-off" type="submit" value="Ver">
             </div>
             <div>
-                <input class="btn-off" type="submit" value="Reservar">
+                <input id="save_date" class="btn-off" type="submit" value="Reservar">
             </div>
         </div>
     </div>

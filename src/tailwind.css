@@ -38,6 +38,7 @@
     html {
         font-family: Athelas;
     }
+
 }
 
 @layer utilities {
@@ -50,6 +51,9 @@
 .btn-gold {
     @apply text-white bg-old-gold py-2 px-6 rounded-xl text-lg;
 }
+}
+
+/* Custome styles */
 
 .btn-off {
     @apply border border-old-black/90 rounded-md w-32 h-9 text-old-black;
@@ -58,12 +62,13 @@
 .btn-on {
     @apply border bg-old-gold rounded-md w-32 h-9 text-white;
 }
-}
-
-/* Custome styles */
 
 .month-day {
     cursor: pointer;
+}
+.reservation-calendar .month-day {
+    @apply cursor-pointer border border-[#c2c2c4];
+    
 }
 
 .calendar__day-selected {
