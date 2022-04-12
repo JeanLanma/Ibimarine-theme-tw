@@ -63,6 +63,10 @@
     @apply border bg-old-gold rounded-md w-32 h-9 text-white;
 }
 
+.btn {
+    @apply border bg-old-gold rounded-md px-10 h-9 text-white
+}
+
 .month-day {
     cursor: pointer;
 }

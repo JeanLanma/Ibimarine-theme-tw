@@ -132,57 +132,147 @@
     <!-- Section Hero - Title -->
     <section class="my-5">
         <div class="border-y-4 border-old-gold py-2  lg:px-16 lg:mx-auto lg:w-max">
-           <p class="text-center text-old-black text-2xl uppercase font-bold">Contact</p>
+           <p class="text-center text-old-black text-2xl uppercase font-bold">Calendario 2022</p>
         </div>
     </section>
 
-        <!-- Section Contact Only Desktop -->
-
-    <div class="w-full my-10 hidden lg:block">
-        <div class="flex justify-center items-center flex-col">
-            <div>
-                <p class="text-old-gold font-bold text-xl">
-                    ¡Contacta con nosotros!
-                </p>
-            </div>
-    
-            <div class="flex">
-                <div class="flex items-center">
-                    <img class="w-8 mr-1 h-[22px] " src="./img/lang_es.png" alt="">
-                    <p class="font-bold text-xl text-old-black">+34 650 020 215</p>
-                </div>
-                <div class="text-old-black mx-3 font-bold">&#124;</div>
-                <div class="flex items-center">
-                    <img class="w-8 mr-1 h-[22px] " src="./img/lang_en.png" alt="">
-                    <p class="font-bold text-xl text-old-black">+34 650 020 215</p>
-                </div>
-            </div>
-    
-        </div>
-        </div>
 
     <!-- Section Page content -->
 
     <div class="container lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
 
-    <h1>En construcción</h1>
+        <!-- add reservation -->
+
+        <div class="text-old-black">
+            <!-- date -->
+            <div class="text-center">
+                <p class="font-bold text-2xl">7 de mayo</p>
+            </div>
+
+            <!-- add Reservation btn action -->
+            <div class="text-center mt-4">
+                <button class="btn hidden">Añadir reservación</button>
+            </div>
+
+            <!-- add Rerservation form  -->
+            <div class="w-4/5 mx-auto">
+                <p class="text-center text-old-gold uppercase">Añadir reserva</p>
+                <form id="form-add-reservation" action="#">
+
+                    <!-- Input accordion -->
+                    <div class="border border-old-black">
+                        <!-- Arrow Down -->
+                        <div data-target-accordion="boat" class="px-2 py-1 flex items-center justify-items-start transition duration-300">
+                            <div class="w-3 mr-3">
+                                <svg class="w-full h-auto inline" viewBox="40 0 492 190" width="161.967" height="490" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+                                    <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="374.29 -152.505 374.29 337.21 184.29 91.571 373.97 -152.79" transform="matrix(0.000001, -1, 1, 0.000001, 193.789711, 374.289918)" bx:origin="0.525 0.496"></polyline>
+                                </svg>
+                            </div>
+                            <p class="h-auto w-full">
+                                Embarcación
+                            </p>
+                        </div>
+                        <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
+                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                                <p>Van Dautch 40</p>
+                            </div>
+                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                                <p>Sessa Marine c44</p>
+                            </div>
+                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                                <p>Predator 82</p>
+                            </div>
+                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                                <p>Pardo 43</p>
+                            </div>
+                            <div class="opacity-40 border-b border-b-old-black/50 py-2 mb-2">
+                                <p>Astromar</p>
+                            </div>
+                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                                <p>Sessa 52</p>
+                            </div>
+                            <div class="border-b border-b-old-black/50 py-2 mb-2">
+                                <p>OTRO</p>
+                            </div>
+                        </div>
+
+                        <div>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Input normal -->
+                    <div class="my-4">
+                        <label for="client"></label>
+                        <input id="client" name="client" class="w-full" type="text" placeholder="Cliente">
+                    </div>
+                    <div class="my-4">
+                        <label for="phone"></label>
+                        <input id="phone" name="phone" class="w-full" type="text" placeholder="Telefono">
+                    </div>
+
+                    <!-- Input accordion -->
+                    <div class="border border-old-black">
+                        <div class="hidden">
+                            <select name="status" id="status">
+                                <option value="1">Status</option>
+                            </select>
+                        </div>
+                        <!-- accordion head -->
+                        <div data-target-accordion="status" class="px-2 py-1 flex items-center justify-items-start transition duration-300">
+                            <div class="w-3 mr-3">
+                                <svg class="w-full h-auto inline" viewBox="40 0 492 190" width="161.967" height="490" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+                                    <polyline style="stroke: rgb(60, 64, 69); fill: rgb(60, 64, 69);" points="374.29 -152.505 374.29 337.21 184.29 91.571 373.97 -152.79" transform="matrix(0.000001, -1, 1, 0.000001, 193.789711, 374.289918)" bx:origin="0.525 0.496"></polyline>
+                                </svg>
+                            </div>
+                            <p class="h-auto w-full">
+                                Status
+                            </p>
+                        </div>
+                        <!-- accordion body -->
+                        <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
+                            <div onclick="getFormValue(this)" class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                                <div class="w-3 ">
+                                    <svg class="text-[#ffba00]" style="width: 100%; height: auto; display: inline;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle fill="currentcolor" cx="50" cy="50" r="50"/>
+                                    </svg>
+                                </div>
+                                <p>Stand By</p>
+                            </div>
+                            <div class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                                <div class="w-3 ">
+                                    <svg class="text-[#0fd821]" style="width: 100%; height: auto; display: inline;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle fill="currentcolor" cx="50" cy="50" r="50"/>
+                                    </svg>
+                                </div>
+                                <p>Confirmada</p>
+                            </div>
+                        </div>
+
+                        <div>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Text Area -->
+
+                    <div class="my-4">
+                        <textarea class="w-full" name="observations" id="observations" placeholder="Observaciones:"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="my-4 text-center">
+                        <input class="btn" type="submit" value="Guardar">
+                    </div>
+                </form>
+                
+            </div>
+        </div>
    
     </div>
 
-    <!-- Section Contact -->
-
-    <div class="text-center lg:hidden">
-        <div class="m-0">
-            <p class="text-old-gold text-xl font-bold">¡Contacta con nosotros!</p>
-        </div>
-        <div>
-            <p class="text-3xl font-bold text-old-black">+34 650 020 215</p>
-        </div>
-        <div class="text-old-gold text-3xl my-1">
-            <a href="#"><i class="fa-brands fa-facebook-square mr-3"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram-square "></i></a>
-        </div>
-    </div>
 
     <!-- Section footer -->
     <footer class="text-old-black text-center mx-auto lg:flex lg:my-10 lg:w-4/5  lg:gap-4">
@@ -207,6 +297,42 @@
     </footer>
 
     <!-- Menu Script -->
+
+    <script>
+        const accordions = document.querySelectorAll('[data-target-accordion]');
+
+        for(let i = 0; i < accordions.length; i++){
+            accordions[i].addEventListener('click', function(){
+                const accordionBody = accordions[i].nextElementSibling;
+
+                const accordion = accordionBody.style.maxHeight
+                            ? accordionBody.style.maxHeight = null
+                            : accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
+            
+        })}
+    </script>
+
+    <script>
+
+        function getFormValue(el){
+            console.log(el)
+        }
+        const form = document.getElementById('form-add-reservation');
+        const status = document.querySelector('[data-target-accordion="status"]');
+            status.parentElement.addEventListener('click', function(e){
+                console.log(e.target);
+            })
+            const statusValue = status.parentElement.querySelector('[name="status"]').value;
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            console.log(statusValue);
+            console.log(this.client.value);
+            console.log(this.phone.value);
+            console.log(this.observations.value);
+        })
+    </script>
 
     <script>
         const closeMenuBtn = document.getElementById('menu_close');

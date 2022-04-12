@@ -137,7 +137,7 @@ const UCalendar = new (function(){
     }
 })();
 
-const UDatePicker = function(UcalendarParsed){
+const UDatePicker = function(UIcalendarInstance){
     this.events = new UEmiter();
     this.savedDates = [];
 
@@ -276,7 +276,7 @@ const UIFullCalendar = function({Year, target}){
     
 }
 const UICustomeFullCalendar = function({Year, target, onDayClicked, onEmptyDates}){
-
+    const these = this;
     const _Year = Year || UCalendar.Now().Year;
     this._target = target;  
 
@@ -286,9 +286,8 @@ const UICustomeFullCalendar = function({Year, target, onDayClicked, onEmptyDates
       this._target.innerHTML = this.UIcalendar.map((HtmlCalendar) => HtmlCalendar.customeHtmlCalendar(callback)).join('');
     }    
 
-    const pickedDays = new UDatePicker(UCalendar);
-    const UXcontroll = new UXCalendar({UIcalendar: this});
-    const these = this;
+    const pickedDays = new UDatePicker(these);
+    const UXcontroll = new UXCalendar({UIcalendar: these});
 
     this.getSelectedDates = function(){
       return pickedDays.savedDates;
@@ -322,7 +321,7 @@ const UICustomeFullCalendar = function({Year, target, onDayClicked, onEmptyDates
             /* Calendar API Functions */
 
             if(typeof onDayClicked === 'function' && pickedDays.savedDates.length >= 1){
-                onDayClicked();
+                onDayClicked(these);
                 pickedDays.onPickDate(onDayClicked);
             }
             if(typeof onEmptyDates === 'function'){
