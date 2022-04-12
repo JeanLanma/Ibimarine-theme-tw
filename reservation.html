@@ -139,37 +139,66 @@
 
     <!-- Section Page content -->
 
-    <div id="reservationContainer" class="container lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
+    
+    <!-- Overlay Reservation -->
+    <div id="reservation_overlay" class="hidden fixed top-0 left-0 z-10  bg-old-black/95  h-screen w-full">
+
+        <!-- Overlay content -->
+        <div class="h-screen flex flex-col items-center text-center">
+            <div>
+                <div class="w-56 mt-40 mx-auto">
+                    <img src="./img/logoibimarine_2.png" alt="Logo Ibimarine">
+                </div>
+            </div>
+
+            <div class="text-white text-center">
+                <div class="w-4/5 mx-auto my-10">
+                    <p class="font-bold text-2xl lg:text-3xl my-5 lg:my-8">Reserva Creada!</p>
+                    <p class="text-xl lg:text-3xl lg:w-[50%] mx-auto">
+                        Puedes comprobar que tu reserva ha sido creada en el calendario.
+                    </p>
+                </div>
+
+            </div>
+
+            <div>
+                <button id="reservation_close" class="btn-gold">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="reservationContainer" class="container lg:pb-10 lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
 
         <!-- add reservation -->
 
-        <div class="text-old-black">
+        <div class="text-old-black lg:w-2/3">
             <!-- date -->
             <div class="text-center">
                 <p class="font-bold text-2xl">7 de mayo</p>
             </div>
 
             <!-- add Reservation btn action -->
-            <div class="text-center mt-4">
-                <button class="btn hidden">Añadir reservación</button>
+            <div id="addReservationBtn" class="text-center mt-4">
+                <button class="btn">Añadir reservación</button>
             </div>
 
             <!-- add Rerservation form  -->
-            <div class="w-4/5 mx-auto">
-                <p class="text-center text-old-gold uppercase">Añadir reserva</p>
+            <div id="addReservationForm" class="hidden w-4/5 mx-auto">
+                <p class="text-center text-old-gold uppercase">Añadir reservacion</p>
                 <form id="form-add-reservation" action="#">
 
                     <!-- Input accordion -->
                     <div class="border border-old-black">
                         <div class="hidden">
                             <select name="boat" id="boat">
-                                <option value="1">Van Dautch 40</option>
-                                <option value="2">Sessa Marine c44</option>
-                                <option value="3">Predator 82</option>
-                                <option value="4">Pardo 43</option>
-                                <option value="5">Astromar</option>
-                                <option value="6">Sessa 52</option>
-                                <option value="0">Otro</option>
+                                <option value="0">Van Dautch 40</option>
+                                <option value="1">Sessa Marine c44</option>
+                                <option value="2">Predator 82</option>
+                                <option value="3">Pardo 43</option>
+                                <option value="4">Astromar</option>
+                                <option value="5">Sessa 52</option>
+                                <option value="null">Otro</option>
                             </select>
                         </div>
                         <!-- Arrow Down -->
@@ -184,25 +213,25 @@
                             </p>
                         </div>
                         <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 1, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 0, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Van Dautch 40</p>
                             </div>
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 2, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 1, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Sessa Marine c44</p>
                             </div>
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 3, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 2, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Predator 82</p>
                             </div>
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 4, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 3, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Pardo 43</p>
                             </div>
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 5, 'boatTextContent')" class="opacity-40 border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 4, 'boatTextContent')" class="opacity-40 border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Astromar</p>
                             </div>
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 6, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', 5, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>Sessa 52</p>
                             </div>
-                            <div onclick="setFormValue('form-add-reservation', 'boat', 0, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
+                            <div onclick="setFormValue('form-add-reservation', 'boat', null, 'boatTextContent')" class="border-b border-b-old-black/50 py-2 mb-2">
                                 <p>OTRO</p>
                             </div>
                         </div>
@@ -308,7 +337,31 @@
         </div>
     </footer>
 
+
+    <!-- Axios -->
+    <script src="/vendor/axios.min.js"></script>
+    <script>
+
+    </script>
     <!-- Menu Script -->
+
+    <script>
+        const addReservationBtn = document.getElementById('addReservationBtn');
+        const addReservationForm = document.getElementById('addReservationForm');
+
+        addReservationBtn.addEventListener('click', function(){
+            addReservationForm.style.display = 'block';
+            addReservationBtn.style.display = 'none';
+        })
+
+        // Reservation overlay
+
+        const closeReservationOverlay = document.getElementById('reservation_close');
+        
+        closeReservationOverlay.addEventListener('click', function(){
+            document.getElementById('reservation_overlay').style.display = 'none';
+        })
+    </script>
 
     <script>
         const accordions = document.querySelectorAll('[data-target-accordion]');
@@ -336,7 +389,7 @@
                 form[targetInput].value = value;
             }
             if(targetLabel){
-                if(form[targetInput].options && form[targetInput].selectedIndex){
+                if(form[targetInput].options){
                     document.getElementById(targetLabel).textContent = form[targetInput].options[form[targetInput].selectedIndex].text;
                     return true;
                 }
@@ -350,16 +403,14 @@
             
         form.addEventListener('submit', function(e){
             e.preventDefault();
+            document.getElementById('reservation_overlay').style.display = 'block';
             const statusValue = status.parentElement.querySelector('[name="status"]').value;
             const boatValue = boat.parentElement.querySelector('[name="boat"]').value;
 
-            console.log('The boat id is: ',boatValue);
-            console.log('The status value ( 0 is stand By, 1 is Confirmed ) is: ',statusValue);
-            console.log(this.client.value);
-            console.log(this.phone.value);
-            console.log(this.observations.value);
 
-            alert('Client Name: '+ this.client.value + 'Client Phone: '+ this.phone.value + 'The status value ( 0 is stand By, 1 is Confirmed ) is: ' + (statusValue ?? 'standBy') +' The boat id is: ' + boatValue + 'Some observations: ' + this.observations.value);
+            const clientName = this.client.value;
+            const clientPhone = this.phone.value;
+            const employObservation = this.observations.value;
         })
     </script>
 

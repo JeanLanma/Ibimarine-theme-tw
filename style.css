@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1785,6 +1785,14 @@ ol.calendar__weekdays {
     margin-left: 2.5rem;
   }
 
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .lg\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1865,6 +1873,10 @@ ol.calendar__weekdays {
 
   .lg\:w-80 {
     width: 20rem;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .lg\:max-w-full {
@@ -1976,6 +1988,10 @@ ol.calendar__weekdays {
 
   .lg\:pb-8 {
     padding-bottom: 2rem;
+  }
+
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .lg\:text-justify {
