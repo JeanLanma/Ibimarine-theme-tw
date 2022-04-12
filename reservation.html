@@ -171,7 +171,6 @@
     <div id="reservationContainer" class="container lg:pb-10 lg:mx-auto lg:flex lg:flex-wrap lg:columns-2 lg:justify-center lg:w-4/5 lg:border-b-4 lg:border-b-old-gold">
 
         <!-- add reservation -->
-
         <div class="text-old-black lg:w-2/3">
             <!-- date -->
             <div class="text-center">
@@ -274,7 +273,7 @@
                         <!-- accordion body -->
                         <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
                             <div onclick="setFormValue('form-add-reservation','status', 0, 'statusTextContent')" class="flex gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
-                                <div class="w-3 ">
+                                <div class="w-3">
                                     <svg class="text-[#ffba00]" style="width: 100%; height: auto; display: inline;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                         <circle fill="currentcolor" cx="50" cy="50" r="50"/>
                                     </svg>
@@ -309,6 +308,67 @@
                     </div>
                 </form>
                 
+            </div>
+
+
+        </div>
+
+        <!-- See Reservations -->
+        <div class="w-4/5 mx-auto flex justify-center my-10">
+            <!-- singular day reservation -->
+            <div class="w-full my-5 text-center">
+                <!-- day -->
+                <div class="my-2">
+                    <p class="font-bold text-xl text-old-black">Reservas del 7 de mayo</p>
+                </div>
+
+                <!-- reservation card -->
+                <div class="border border-old-black rounded-lg">
+                    <!-- head card -->
+                    <div data-target-accordion class="px-2 py-1 flex gap-2 justify-center items-center transition duration-300">
+                        <div class="w-3">
+                            <svg class="text-[#0fd821]" style="width: 100%; height: auto; display: inline;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle fill="currentcolor" cx="50" cy="50" r="50"/>
+                            </svg>
+                        </div>
+                        <p class="" id="statusTextContent">
+                            Van Ducht 40
+                        </p>
+                    </div>
+                    <!-- body card -->
+                    <div class="max-h-0 overflow-hidden w-4/5 mx-auto text-center font-bold text-old-black transition-[max-height] duration-300">
+                        <div class="flex flex-col gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <p class="text-sm">Reservado</p>
+                            <p class="text-xl">7 de mayo del 2022</p>
+                        </div>  
+                        <div class="flex flex-col gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <p class="text-sm">Reservado por</p>
+                            <p class="text-xl">Stand By</p>
+                        </div>  
+                        <div class="flex flex-col gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <p class="text-sm">Nombre del cliente</p>
+                            <p class="text-xl">ana bonet</p>
+                        </div>  
+                        <div class="flex flex-col gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <p class="text-sm">Telefono</p>
+                            <p class="text-xl">+34 678 763 402</p>
+                        </div>  
+                        <div class="flex flex-col gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <p class="text-sm">Obersvaciones</p>
+                            <p class="text-xl">Pagada 50%, llevar refrescos, llamar al capitan</p>
+                        </div>  
+                        <div class="flex flex-col gap-2 justify-center border-b border-b-old-black/50 py-2 mb-2">
+                            <p class="text-sm">Ultima actualizacion por: <span>Jhon Doe.</span> </p>
+                            <p class="text-xl">Viernes 7 de abril 2022</p>
+                        </div>
+                        
+                        <div class="flex gap-1 justify-center my-4">
+                            <div><a class="btn-off py-2 px-3" href="#">Editar</a></div>
+                            <div><a class="btn-off py-2 px-3" href="#">Eliminar</a></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
    
@@ -359,14 +419,14 @@
         const closeReservationOverlay = document.getElementById('reservation_close');
         
         closeReservationOverlay.addEventListener('click', function(){
+            document.getElementById('addReservationBtn').style.display = 'block';
+            document.getElementById('addReservationForm').style.display = 'none';
             document.getElementById('reservation_overlay').style.display = 'none';
         })
     </script>
 
     <script>
         const accordions = document.querySelectorAll('[data-target-accordion]');
-
-        const ReserVAtionContainer = document.getElementById('reservationContainer');
 
         for(let i = 0; i < accordions.length; i++){
             accordions[i].addEventListener('click', function(e){
