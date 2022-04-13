@@ -14,6 +14,8 @@ module.exports = {
     },
     extend: {
       lineClamp: {
+        8: '8',
+        9: '9',
         12: '12',
       }
     },
