@@ -172,8 +172,8 @@ const UDatePicker = function(UICalendarInstance,onDayPicked, onEmptyDates){
           }else {
               if(this.savedDates.length === 1){
                 this.savedDates.splice(isRepeteated, 1);
-                if(this.isCallable(onDayPicked)){
-                  onDayPicked(UICalendarInstance);
+                if(this.isCallable(onEmptyDates)){
+                  onEmptyDates(UICalendarInstance);
                 }
                 return;
               }
@@ -325,14 +325,12 @@ const UICustomeFullCalendar = function({Year, target, onDayPicked, onEmptyDates}
 
           if(e.target.hasAttribute('data-arrow-prev')) {
               e.stopPropagation();
-              console.log('prev')
               UXcontroll.showPrevCalendar(e);
             }
             if(e.target.hasAttribute('data-arrow-next')) {
               e.stopPropagation();
-              console.log('next')
               UXcontroll.showNextCalendar();
-          }
+            }
 
             if(!UCalendar.isCalendarDate(e.target)) return null;
 
