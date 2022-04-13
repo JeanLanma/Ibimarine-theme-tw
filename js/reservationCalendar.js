@@ -1,9 +1,10 @@
 const saveDatesBtn = document.getElementById('save_date');
 
 const customeYearCalendar = new UICustomeFullCalendar({
-    year: 2023,
+    year: 2022,
     target: document.querySelector('#reservationCalendar'),
     onDayPicked: function(calendar){
+        console.log(calendar.getDates())
         saveDatesBtn.classList.remove('btn-off');
         saveDatesBtn.classList.add('btn-on');
     },
@@ -13,7 +14,7 @@ const customeYearCalendar = new UICustomeFullCalendar({
     }
 });
 
-customeYearCalendar.CustomeUI( function({monthName, monthId, year, HtmlMonthDays, HtmlWeekDays}){
+customeYearCalendar.CustomeUI( function({monthName, monthId, year, HtmlMonthDays, HtmlWeekDays, fillDaysStart, fillDaysEnd}){
     return `
     <div data-date-id="${monthId}" class=" ${UCalendar.getMonthCalendarInfo().monthName === monthName ? 'calendar-active': ''} hidden reservation-calendar w-80 mx-auto font-bold">
     <!-- Calendar Head -->
@@ -38,8 +39,9 @@ customeYearCalendar.CustomeUI( function({monthName, monthId, year, HtmlMonthDays
         <ol class="calendar__days text-center grid grid-cols-7 pb-3 px-0 text-xl text-old-black">
             ${ HtmlWeekDays.join('') }
         </ol>
-        <ol class="calendar__days calendar__numberDay text-center grid gap-y-6 gap-x-1 grid-cols-7 pb-3 px-0 text-xl">
-            ${ HtmlMonthDays.join('') }
+        <ol class="calendar__days calendar__numberDay text-center grid gap-y-6 gap-x-1 grid-cols-7 grid-rows-6 pb-3 px-0 text-xl">
+            
+            ${ fillDaysStart.join('') + HtmlMonthDays.join('') + fillDaysEnd.join('')}
         </ol>
     </div>
 </div>
