@@ -3,12 +3,13 @@ const saveDatesBtn = document.getElementById('save_date');
 const customeYearCalendar = new UICustomeFullCalendar({
     year: 2022,
     target: document.querySelector('#reservationCalendar'),
-    onDayClicked: function(calendar){
-        console.log(calendar.getSelectedDates())
+    onDayPicked: function(calendar){
+        console.log(calendar.getDates())
         saveDatesBtn.classList.remove('btn-off');
         saveDatesBtn.classList.add('btn-on');
     },
     onEmptyDates: function(calendar){
+        console.log(calendar.getDates())
             saveDatesBtn.classList.remove('btn-on');
             saveDatesBtn.classList.add('btn-off');
     }
